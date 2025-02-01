@@ -1,0 +1,136 @@
+{
+  "$id": "1",
+  "Tours": {
+    "$id": "2",
+    "$values": [
+      {
+        "$id": "3",
+        "Id": 1,
+        "Name": "Wycieczka po Warszawie",
+        "Description": "Zwiedzanie stolicy",
+        "StartDate": "2025-02-01T00:00:00",
+        "EndDate": "2025-02-02T00:00:00",
+        "Price": 150,
+        "Destination": "Warszawa",
+        "GuideId": 1,
+        "Guide": null
+      },
+      {
+        "$id": "4",
+        "Id": 2,
+        "Name": "W\u0119dr\u00F3wki w Tatrach",
+        "Description": "G\u00F3rska wycieczka",
+        "StartDate": "2025-03-01T00:00:00",
+        "EndDate": "2025-03-02T00:00:00",
+        "Price": 200,
+        "Destination": "Tatry",
+        "GuideId": 2,
+        "Guide": null
+      }
+    ]
+  },
+  "Guides": {
+    "$id": "5",
+    "$values": [
+      {
+        "$id": "6",
+        "Id": 1,
+        "FirstName": "Jan",
+        "LastName": "Kowalski",
+        "Specialization": "History",
+        "ExperienceYears": 5,
+        "Languages": "Polish, English"
+      },
+      {
+        "$id": "7",
+        "Id": 2,
+        "FirstName": "Anna",
+        "LastName": "Nowak",
+        "Specialization": "Nature",
+        "ExperienceYears": 3,
+        "Languages": "Polish, German"
+      }
+    ]
+  },
+  "Customers": {
+    "$id": "8",
+    "$values": [
+      {
+        "$id": "9",
+        "Id": 1,
+        "FirstName": "Adam",
+        "LastName": "Kowalski",
+        "Email": "adam@example.com",
+        "PhoneNumber": "123456789"
+      },
+      {
+        "$id": "10",
+        "Id": 2,
+        "FirstName": "Beata",
+        "LastName": "Nowak",
+        "Email": "beata@example.com",
+        "PhoneNumber": "987654321"
+      }
+    ]
+  },
+  "Bookings": {
+    "$id": "11",
+    "$values": [
+      {
+        "$id": "12",
+        "Id": 1,
+        "TourId": 1,
+        "CustomerId": 1,
+        "BookingDate": "2025-01-15T00:00:00",
+        "TourDate": "2025-02-01T00:00:00",
+        "NumberOfParticipants": 2,
+        "TotalPrice": 300,
+        "Status": "Confirmed",
+        "Tour": {
+          "$ref": "3"
+        },
+        "Customer": {
+          "$ref": "9"
+        }
+      },
+      {
+        "$id": "13",
+        "Id": 2,
+        "TourId": 2,
+        "CustomerId": 2,
+        "BookingDate": "2025-01-10T00:00:00",
+        "TourDate": "2025-03-01T00:00:00",
+        "NumberOfParticipants": 1,
+        "TotalPrice": 200,
+        "Status": "Pending",
+        "Tour": {
+          "$ref": "4"
+        },
+        "Customer": {
+          "$ref": "10"
+        }
+      }
+    ]
+  },
+  "Locations": {
+    "$id": "14",
+    "$values": [
+      {
+        "$id": "15",
+        "Id": 1,
+        "Name": "Muzeum Narodowe",
+        "Description": "Muzeum sztuki",
+        "Address": "Warszawa, Al. Jerozolimskie 3",
+        "PlaceType": "Museum"
+      },
+      {
+        "$id": "16",
+        "Id": 2,
+        "Name": "Tatry",
+        "Description": "Pasmo g\u00F3rskie",
+        "Address": "Tatry, Zakopane",
+        "PlaceType": "Mountain"
+      }
+    ]
+  }
+}

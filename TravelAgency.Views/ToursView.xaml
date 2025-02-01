@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="TravelAgency.Views.ToursView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/TravelAgency.Views;component/SharedResources.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0" LastChildFill="False">
+            <Button Content="Add Animal" Command="{Binding Add}" DockPanel.Dock="Right" Margin="5" Style="{StaticResource SecondaryButton}" Tag="&#xE710;" />
+        </DockPanel>
+        <ListView Grid.Row="1" ItemsSource="{Binding Animals}" BorderThickness="0" ItemContainerStyle="{StaticResource ListViewPrimaryItem}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Name}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Species" DisplayMemberBinding="{Binding Species}">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Species}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Age" DisplayMemberBinding="{Binding Age}">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Age}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Edit">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Command="{Binding DataContext.Edit, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" CommandParameter="{Binding AnimalId}" Style="{StaticResource SecondaryButton}" Tag="&#xE70F;" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Remove">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Command="{Binding DataContext.Remove, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" CommandParameter="{Binding AnimalId}" Style="{StaticResource SecondaryButton}" Tag="&#xE74D;" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</UserControl>

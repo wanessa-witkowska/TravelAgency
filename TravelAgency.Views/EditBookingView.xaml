@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="TravelAgency.Views.EditBookingView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/TravelAgency.Views;component/SharedResources.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid Width="313">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Back and Save buttons -->
+        <Button Content="Back" Grid.Row="0" Grid.Column="0" Command="{Binding Back}" Margin="5,5,5,0" Width="100" HorizontalAlignment="Left" Style="{StaticResource PrimaryButton}" Tag="&#xE72B;" />
+        <Button Content="Save" Grid.Row="0" Grid.Column="1" Command="{Binding Save}" Margin="5,5,5,0" Width="100" HorizontalAlignment="Right" Style="{StaticResource PrimaryButton}" Tag="&#xE74E;" />
+
+        <!-- Booking Data Section -->
+        <GroupBox Header="Booking Details" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" Padding="10">
+            <StackPanel>
+                <!-- Customer Name -->
+                <WrapPanel Margin="0,0,0,5">
+                    <TextBlock Text="Customer Name" Style="{StaticResource PrimaryTextBlock}" Width="89" />
+                    <TextBox Text="{Binding Booking.CustomerName, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" Width="167" />
+                </WrapPanel>
+
+                <!-- Booking Date -->
+                <WrapPanel Margin="0,0,0,5">
+                    <TextBlock Text="Booking Date" Style="{StaticResource PrimaryTextBlock}" Width="89" />
+                    <DatePicker SelectedDate="{Binding Booking.BookingDate}" Style="{StaticResource PrimaryDatePicker}" />
+                </WrapPanel>
+
+                <!-- Destination -->
+                <WrapPanel Margin="0,0,0,5">
+                    <TextBlock Text="Destination" Style="{StaticResource PrimaryTextBlock}" Width="89" />
+                    <TextBox Text="{Binding Booking.Destination, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" />
+                </WrapPanel>
+
+                <!-- Transport (e.g., Flight, Bus) -->
+                <WrapPanel Margin="0,0,0,5">
+                    <TextBlock Text="Transport" Style="{StaticResource PrimaryTextBlock}" Width="89" />
+                    <TextBox Text="{Binding Booking.Transport, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" />
+                </WrapPanel>
+
+                <!-- Price -->
+                <WrapPanel Margin="0,0,0,5">
+                    <TextBlock Text="Price" Style="{StaticResource PrimaryTextBlock}" Width="89" />
+                    <TextBox Text="{Binding Booking.Price, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" />
+                </WrapPanel>
+
+                <!-- Notes -->
+                <WrapPanel Margin="0,0,0,5">
+                    <TextBlock Text="Notes" Style="{StaticResource PrimaryTextBlock}" Width="89" />
+                    <TextBox Text="{Binding Booking.Notes, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" />
+                </WrapPanel>
+            </StackPanel>
+        </GroupBox>
+
+        <!-- Response Section -->
+        <TextBlock Text="{Binding Response}" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="0,0,0,5"/>
+    </Grid>
+</UserControl>

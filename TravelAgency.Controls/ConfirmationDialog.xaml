@@ -1,0 +1,26 @@
+﻿<Window x:Class="TravelAgency.Controls.ConfirmationDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TravelAgency.Controls"
+        mc:Ignorable="d"
+        SizeToContent="WidthAndHeight"
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Buttons.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid Margin="5">
+        <DockPanel>
+            <TextBlock Text="Are you sure you want to delete this item?" HorizontalAlignment="Center" DockPanel.Dock="Top"/>
+            <WrapPanel HorizontalAlignment="Center" Margin="0,5,0,0">
+                <Button x:Name="YesButton" Content="Yes" Width="60" Margin="5,0" Click="YesButton_Click" Style="{StaticResource PrimaryButton}" Tag="&#xE73E;" />
+                <Button x:Name="NoButton" Content="No" Width="60" Margin="5,0" Click="NoButton_Click" Style="{StaticResource PrimaryButton}" Tag="&#xE711;" />
+            </WrapPanel>
+        </DockPanel>
+    </Grid>
+</Window>

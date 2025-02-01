@@ -1,0 +1,14 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/TravelAgency.Controls;component/TextBlocks.xaml" />
+        <ResourceDictionary Source="/TravelAgency.Controls;component/TextBoxes.xaml"/>
+        <ResourceDictionary Source="/TravelAgency.Controls;component/Buttons.xaml" />
+        <ResourceDictionary Source="/TravelAgency.Controls;component/ListViews.xaml"/>
+        <ResourceDictionary Source="/TravelAgency.Controls;component/TabControls.xaml"/>
+        <ResourceDictionary Source="/TravelAgency.Views;component/DataTemplates.xaml"/>
+        <ResourceDictionary Source="/TravelAgency.Controls;component/PrimaryDatePicker.xaml" />
+        <ResourceDictionary Source="/TravelAgency.Controls;component/PrimaryComboBox.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Page Update="AddBookingView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddTourView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddLocationView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddGuideView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddCustomerView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DataTemplates.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EditBookingView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EditTourView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EditLocationView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EditGuideView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EditCustomerView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="BookingsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ToursView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="LocationsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GuidesView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CustomersView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

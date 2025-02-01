@@ -1,0 +1,41 @@
+﻿<Window x:Class="TravelAgency.Main.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Icon="Resources/Icon.ico"
+        Title="Travel Agency - Witkowska and Tracz" Height="600" Width="1024" Background="LightGray">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/TravelAgency.Controls;component/TabControls.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <BooleanToVisibilityConverter x:Key="BoolToVis" />
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <TabControl TabStripPlacement="Left" SelectedIndex="{Binding SelectedTab}" ItemContainerStyle="{StaticResource TabPrimaryItem}">
+            <TabItem Header="Bookings" Tag="&#xE77A;">
+                <ContentControl Content="{Binding BookingsSubView}" Margin="0,0,-2,-2" />
+            </TabItem>
+
+            <TabItem Header="Customers" Tag="&#xE735;">
+                <ContentControl Content="{Binding CustomersSubView}" />
+            </TabItem>
+
+            <TabItem Header="Guides" Tag="&#xE774;">
+                <ContentControl Content="{Binding GuidesSubView}" />
+            </TabItem>
+
+            <TabItem Header="Locations" Tag="&#xE82B;">
+                <ContentControl Content="{Binding LocationsSubView}" />
+            </TabItem>
+
+            <TabItem Header="Search" Tag="&#xE773;">
+                <ContentControl Content="{Binding SearchSubView}" />
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

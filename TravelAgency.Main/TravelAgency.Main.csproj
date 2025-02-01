@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<UseWPF>true</UseWPF>
+		<ApplicationIcon />
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="Resources\Icon.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.5" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="8.0.0-preview.3.23174.2" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.0-preview.3.23174.2" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0-preview.3.23174.2">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0-preview.3.23174.8" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0-preview.3.23174.8" />
+		<PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\TravelAgency.Controls\TravelAgency.Controls.csproj" />
+		<ProjectReference Include="..\TravelAgency.Data\TravelAgency.Data.csproj" />
+		<ProjectReference Include="..\TravelAgency.Interfaces\TravelAgency.Interfaces.csproj" />
+		<ProjectReference Include="..\TravelAgency.Services\TravelAgency.Services.csproj" />
+		<ProjectReference Include="..\TravelAgency.Views\TravelAgency.Views.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="Resources\Icon.ico" />
+	</ItemGroup>
+
+</Project>

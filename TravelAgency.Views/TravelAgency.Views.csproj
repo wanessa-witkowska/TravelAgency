@@ -1,0 +1,88 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon />
+  </PropertyGroup>
+
+  <ItemGroup>
+
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0-preview.3.23174.8" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0-preview.3.23174.8" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TravelAgency.Controls\TravelAgency.Controls.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="AddTourView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddLocationView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddGuideView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddCustomerView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddBookingView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddSubjectView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EditTourView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EditLocationView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EditGuideView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EditCustomerView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ToursView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="LocationsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GuidesView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CustomersView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EditBookingView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EditSubjectView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SearchView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="BookingsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SubjectsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="DataTemplates.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+
+</Project>

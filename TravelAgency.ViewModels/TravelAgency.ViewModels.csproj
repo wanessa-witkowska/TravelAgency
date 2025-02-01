@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0-preview2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TravelAgency.Data\TravelAgency.Data.csproj" />
+    <ProjectReference Include="..\TravelAgency.Extensions\TravelAgency.Extensions.csproj" />
+    <ProjectReference Include="..\TravelAgency.Interfaces\TravelAgency.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

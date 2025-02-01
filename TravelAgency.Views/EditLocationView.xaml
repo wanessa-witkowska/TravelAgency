@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="TravelAgency.Views.EditLocationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/TravelAgency.Views;component/SharedResources.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Back and Save Buttons -->
+        <Button Content="Back" Grid.Row="0" Grid.Column="0" Command="{Binding Back}" Margin="5,5,5,0" Width="100" HorizontalAlignment="Left" Style="{StaticResource PrimaryButton}" Tag="&#xE72B;" />
+        <Button Content="Save" Grid.Row="0" Grid.Column="1" Command="{Binding Save}" Margin="5,5,5,0" Width="100" HorizontalAlignment="Right" Style="{StaticResource PrimaryButton}" Tag="&#xE74E;" />
+
+        <!-- Location Details Section -->
+        <GroupBox Header="Location Details" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" Padding="10">
+            <StackPanel>
+                <!-- Name -->
+                <WrapPanel Margin="0,0,0,5">
+                    <TextBlock Text="Name" Style="{StaticResource PrimaryTextBlock}" />
+                    <TextBox Text="{Binding Location.Name, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" />
+                </WrapPanel>
+
+                <!-- Description -->
+                <WrapPanel Margin="0,0,0,5">
+                    <TextBlock Text="Description" Style="{StaticResource PrimaryTextBlock}" />
+                    <TextBox Text="{Binding Location.Description, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" />
+                </WrapPanel>
+
+                <!-- Address -->
+                <WrapPanel Margin="0,0,0,5">
+                    <TextBlock Text="Address" Style="{StaticResource PrimaryTextBlock}" />
+                    <TextBox Text="{Binding Location.Address, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" />
+                </WrapPanel>
+
+                <!-- Place Type -->
+                <WrapPanel Margin="0,0,0,5">
+                    <TextBlock Text="Place Type" Style="{StaticResource PrimaryTextBlock}" />
+                    <TextBox Text="{Binding Location.PlaceType, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" />
+                </WrapPanel>
+            </StackPanel>
+        </GroupBox>
+
+        <!-- Response Section -->
+        <TextBlock Text="{Binding Response}" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="0,0,0,5"/>
+    </Grid>
+</UserControl>

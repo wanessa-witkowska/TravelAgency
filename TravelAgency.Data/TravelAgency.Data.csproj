@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0-preview.3.23174.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="8.0.0-preview.3.23174.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.0-preview.3.23174.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0-preview.3.23174.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TravelAgency.Models\TravelAgency.Models.csproj" />
+  </ItemGroup>
+
+</Project>

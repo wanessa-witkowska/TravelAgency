@@ -1,0 +1,56 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:views="clr-namespace:TravelAgency.Views"
+                    xmlns:viewmodels="clr-namespace:TravelAgency.ViewModels;assembly=TravelAgency.ViewModels">
+    <DataTemplate DataType="{x:Type viewmodels:AddBookingViewModel}">
+        <views:AddBookingView />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewmodels:AddCustomerViewModel}">
+        <views:AddCustomerView />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewmodels:AddGuideViewModel}">
+        <views:AddGuideView />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewmodels:AddLocationViewModel}">
+        <views:AddLocationView />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewmodels:AddTourViewModel}">
+        <views:AddTourView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewmodels:BookingsViewModel}">
+        <views:BookingsView />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewmodels:CustomersViewModel}">
+        <views:CustomersView />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewmodels:GuidesViewModel}">
+        <views:GuidesView />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewmodels:LocationsViewModel}">
+        <views:LocationsView />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewmodels:ToursViewModel}">
+        <views:ToursView />
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type viewmodels:SearchViewModel}">
+        <views:SearchView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewmodels:EditBookingViewModel}">
+        <views:EditBookingView />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewmodels:EditCustomerViewModel}">
+        <views:EditCustomerView />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewmodels:EditGuideViewModel}">
+        <views:EditGuideView />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewmodels:EditLocationViewModel}">
+        <views:EditLocationView />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewmodels:EditTourViewModel}">
+        <views:EditTourView />
+    </DataTemplate>
+</ResourceDictionary>

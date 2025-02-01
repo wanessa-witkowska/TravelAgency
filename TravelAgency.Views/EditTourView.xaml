@@ -1,0 +1,80 @@
+﻿<UserControl x:Class="TravelAgency.Views.EditTourView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/TravelAgency.Views;component/SharedResources.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Back and Save Buttons -->
+        <Button Content="Back" Grid.Row="0" Grid.Column="0" Command="{Binding Back}" Margin="5,5,5,0" Width="100" HorizontalAlignment="Left" Style="{StaticResource PrimaryButton}" Tag="&#xE72B;" />
+        <Button Content="Save" Grid.Row="0" Grid.Column="1" Command="{Binding Save}" Margin="5,5,5,0" Width="100" HorizontalAlignment="Right" Style="{StaticResource PrimaryButton}" Tag="&#xE74E;" />
+
+        <!-- Tour Details Section -->
+        <GroupBox Header="Tour Details" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" Padding="10">
+            <StackPanel>
+                <!-- Name -->
+                <WrapPanel Margin="0,0,0,5">
+                    <TextBlock Text="Name" Style="{StaticResource PrimaryTextBlock}" />
+                    <TextBox Text="{Binding Tour.Name, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" />
+                </WrapPanel>
+
+                <!-- Description -->
+                <WrapPanel Margin="0,0,0,5">
+                    <TextBlock Text="Description" Style="{StaticResource PrimaryTextBlock}" />
+                    <TextBox Text="{Binding Tour.Description, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" />
+                </WrapPanel>
+
+                <!-- Start Date -->
+                <WrapPanel Margin="0,0,0,5">
+                    <TextBlock Text="Start Date" Style="{StaticResource PrimaryTextBlock}" />
+                    <DatePicker SelectedDate="{Binding Tour.StartDate}" Style="{StaticResource PrimaryDatePicker}" />
+                </WrapPanel>
+
+                <!-- End Date -->
+                <WrapPanel Margin="0,0,0,5">
+                    <TextBlock Text="End Date" Style="{StaticResource PrimaryTextBlock}" />
+                    <DatePicker SelectedDate="{Binding Tour.EndDate}" Style="{StaticResource PrimaryDatePicker}" />
+                </WrapPanel>
+
+                <!-- Price -->
+                <WrapPanel Margin="0,0,0,5">
+                    <TextBlock Text="Price" Style="{StaticResource PrimaryTextBlock}" />
+                    <TextBox Text="{Binding Tour.Price, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" />
+                </WrapPanel>
+
+                <!-- Destination -->
+                <WrapPanel Margin="0,0,0,5">
+                    <TextBlock Text="Destination" Style="{StaticResource PrimaryTextBlock}" />
+                    <TextBox Text="{Binding Tour.Destination, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" />
+                </WrapPanel>
+
+                <!-- Guide Selection -->
+                <WrapPanel Margin="0,0,0,5">
+                    <TextBlock Text="Guide" Style="{StaticResource PrimaryTextBlock}" />
+                    <ComboBox ItemsSource="{Binding Guides}" SelectedItem="{Binding Tour.Guide}" DisplayMemberPath="FullName" Style="{StaticResource PrimaryComboBox}" />
+                </WrapPanel>
+            </StackPanel>
+        </GroupBox>
+
+        <!-- Response Section -->
+        <TextBlock Text="{Binding Response}" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="0,0,0,5"/>
+    </Grid>
+</UserControl>

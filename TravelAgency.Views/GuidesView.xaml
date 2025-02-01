@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="TravelAgency.Views.GuidesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/TravelAgency.Views;component/SharedResources.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0" LastChildFill="False">
+            <Button Content="Add Guide" Command="{Binding AddCommand}" DockPanel.Dock="Right" Margin="5" Style="{StaticResource SecondaryButton}" Tag="&#xE710;" />
+        </DockPanel>
+        <ListView Grid.Row="1" ItemsSource="{Binding Guides}" BorderThickness="0" ItemContainerStyle="{StaticResource ListViewPrimaryItem}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="First Name" DisplayMemberBinding="{Binding FirstName}">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding FirstName}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Last Name" DisplayMemberBinding="{Binding LastName}">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding LastName}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Specialization" DisplayMemberBinding="{Binding Specialization}">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Specialization}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Experience (Years)" DisplayMemberBinding="{Binding ExperienceYears}">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding ExperienceYears}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Languages" DisplayMemberBinding="{Binding Languages}">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Languages}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Edit">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Command="{Binding DataContext.EditCommand, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" CommandParameter="{Binding Id}" Style="{StaticResource SecondaryButton}" Tag="&#xE70F;" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Remove">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Command="{Binding DataContext.RemoveCommand, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" CommandParameter="{Binding Id}" Style="{StaticResource SecondaryButton}" Tag="&#xE74D;" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</UserControl>
