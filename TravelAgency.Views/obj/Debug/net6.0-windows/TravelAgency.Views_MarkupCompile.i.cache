@@ -16,5 +16,5 @@ TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 241-2125956203
 AddBookingView.xaml;AddCustomerView.xaml;AddGuideView.xaml;AddLocationView.xaml;AddTourView.xaml;BookingsView.xaml;CustomersView.xaml;DataTemplates.xaml;EditBookingView.xaml;EditCustomerView.xaml;EditGuideView.xaml;EditLocationView.xaml;EditTourView.xaml;GuidesView.xaml;LocationsView.xaml;SearchView.xaml;SharedResources.xaml;ToursView.xaml;
 
-False
+True
 

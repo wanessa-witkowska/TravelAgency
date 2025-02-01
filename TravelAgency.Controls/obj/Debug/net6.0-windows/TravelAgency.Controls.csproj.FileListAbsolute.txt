@@ -72,3 +72,4 @@ C:\Users\Wanessa\source\repos\TravelAgency\TravelAgency.Controls\obj\Debug\net6.
 C:\Users\Wanessa\source\repos\TravelAgency\TravelAgency.Controls\obj\Debug\net6.0-windows\TravelAgency.Controls.pdb
 C:\Users\Wanessa\source\repos\TravelAgency\TravelAgency.Controls\obj\Debug\net6.0-windows\TravelAgency.Controls.genruntimeconfig.cache
 C:\Users\Wanessa\source\repos\TravelAgency\TravelAgency.Controls\obj\Debug\net6.0-windows\ref\TravelAgency.Controls.dll
+C:\Users\Wanessa\Documents\GitHub\TravelAgency\TravelAgency.Controls\obj\Debug\net6.0-windows\TravelAgency.Controls.sourcelink.json

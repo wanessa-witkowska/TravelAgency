@@ -48,3 +48,4 @@ C:\Users\Wanessa\source\repos\TravelAgency\TravelAgency.Services\obj\Debug\net6.
 C:\Users\Wanessa\source\repos\TravelAgency\TravelAgency.Services\obj\Debug\net6.0-windows\refint\TravelAgency.Services.dll
 C:\Users\Wanessa\source\repos\TravelAgency\TravelAgency.Services\obj\Debug\net6.0-windows\TravelAgency.Services.pdb
 C:\Users\Wanessa\source\repos\TravelAgency\TravelAgency.Services\obj\Debug\net6.0-windows\ref\TravelAgency.Services.dll
+C:\Users\Wanessa\Documents\GitHub\TravelAgency\TravelAgency.Services\obj\Debug\net6.0-windows\TravelAgency.Services.sourcelink.json

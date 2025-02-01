@@ -220,3 +220,4 @@ C:\Users\Wanessa\Documents\GitHub\TravelAgency\TravelAgency.Main\obj\Debug\net6.
 C:\Users\Wanessa\Documents\GitHub\TravelAgency\TravelAgency.Main\obj\Debug\net6.0-windows\TravelAgency.Main.pdb
 C:\Users\Wanessa\Documents\GitHub\TravelAgency\TravelAgency.Main\obj\Debug\net6.0-windows\TravelAgency.Main.genruntimeconfig.cache
 C:\Users\Wanessa\Documents\GitHub\TravelAgency\TravelAgency.Main\obj\Debug\net6.0-windows\ref\TravelAgency.Main.dll
+C:\Users\Wanessa\Documents\GitHub\TravelAgency\TravelAgency.Main\obj\Debug\net6.0-windows\TravelAgency.Main.sourcelink.json

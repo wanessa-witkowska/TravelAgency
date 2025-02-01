@@ -131,7 +131,7 @@ public class MainWindowViewModel : ViewModelBase
         }
         
         BookingsSubView = new BookingsViewModel(_context, _dialogService);
-        CustomersSubView = new CustomersViewModel(_context, _dialogService, customerService);
+        CustomersSubView = new CustomersViewModel(_context, _dialogService);
         GuidesSubView = new GuidesViewModel(_context, _dialogService, guideService);
         LocationsSubView = new LocationsViewModel(_context, _dialogService, locationService);
         ToursSubView = new ToursViewModel(_context, _dialogService, tourService);

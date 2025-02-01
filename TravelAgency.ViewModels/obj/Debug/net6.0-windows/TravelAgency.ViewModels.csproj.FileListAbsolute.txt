@@ -40,3 +40,4 @@ C:\Users\Wanessa\source\repos\TravelAgency\TravelAgency.ViewModels\obj\Debug\net
 C:\Users\Wanessa\source\repos\TravelAgency\TravelAgency.ViewModels\obj\Debug\net6.0-windows\refint\TravelAgency.ViewModels.dll
 C:\Users\Wanessa\source\repos\TravelAgency\TravelAgency.ViewModels\obj\Debug\net6.0-windows\TravelAgency.ViewModels.pdb
 C:\Users\Wanessa\source\repos\TravelAgency\TravelAgency.ViewModels\obj\Debug\net6.0-windows\ref\TravelAgency.ViewModels.dll
+C:\Users\Wanessa\Documents\GitHub\TravelAgency\TravelAgency.ViewModels\obj\Debug\net6.0-windows\TravelAgency.ViewModels.sourcelink.json

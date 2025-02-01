@@ -16,5 +16,5 @@ TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 240910514178
 Buttons.xaml;ConfirmationDialog.xaml;ListViews.xaml;PrimaryComboBox.xaml;PrimaryDatePicker.xaml;TabControls.xaml;TextBlocks.xaml;TextBoxes.xaml;
 
-False
+True
 

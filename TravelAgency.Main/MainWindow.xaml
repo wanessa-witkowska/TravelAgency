@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Icon="Resources/Icon.ico"
-        Title="Travel Agency - Witkowska and Tracz" Height="600" Width="1024" Background="LightGray">
+        Title="Travel Agency - Witkowska and Tracz" Height="600" Width="1224" Background="LightGray">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -31,6 +31,10 @@
 
             <TabItem Header="Locations" Tag="&#xE82B;">
                 <ContentControl Content="{Binding LocationsSubView}" />
+            </TabItem>
+
+            <TabItem Header="Tours" Tag="&#xE82B;">
+                <ContentControl Content="{Binding ToursSubView}" />
             </TabItem>
 
             <TabItem Header="Search" Tag="&#xE773;">
