@@ -17,7 +17,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <DockPanel Grid.Row="0" LastChildFill="False">
-            <Button Content="Add Guide" Command="{Binding AddCommand}" DockPanel.Dock="Right" Margin="5" Style="{StaticResource SecondaryButton}" Tag="&#xE710;" />
+            <Button Content="Add Guide" Command="{Binding Add}" DockPanel.Dock="Right" Margin="5" Style="{StaticResource SecondaryButton}" Tag="&#xE710;" />
         </DockPanel>
         <ListView Grid.Row="1" ItemsSource="{Binding Guides}" BorderThickness="0" ItemContainerStyle="{StaticResource ListViewPrimaryItem}">
             <ListView.View>
@@ -60,14 +60,14 @@
                     <GridViewColumn Header="Edit">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Command="{Binding DataContext.EditCommand, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" CommandParameter="{Binding Id}" Style="{StaticResource SecondaryButton}" Tag="&#xE70F;" />
+                                <Button Command="{Binding DataContext.Edit, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" CommandParameter="{Binding Id}" Style="{StaticResource SecondaryButton}" Tag="&#xE70F;" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                     <GridViewColumn Header="Remove">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Command="{Binding DataContext.RemoveCommand, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" CommandParameter="{Binding Id}" Style="{StaticResource SecondaryButton}" Tag="&#xE74D;" />
+                                <Button Command="{Binding DataContext.Remove, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" CommandParameter="{Binding Id}" Style="{StaticResource SecondaryButton}" Tag="&#xE74D;" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

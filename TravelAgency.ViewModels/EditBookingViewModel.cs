@@ -302,11 +302,13 @@ namespace TravelAgency.ViewModels
             {
                 return;
             }
-            _booking = _context.Bookings.Find(BookingId);
+
+            _booking = _context.Bookings.Find((int)BookingId);
             if (_booking is null)
             {
                 return;
             }
+
             this.TourId = _booking.TourId;
             this.CustomerId = _booking.CustomerId;
             this.BookingDate = _booking.BookingDate;
@@ -314,5 +316,6 @@ namespace TravelAgency.ViewModels
             this.NumberOfParticipants = _booking.NumberOfParticipants;
             this.TotalPrice = _booking.TotalPrice;
         }
+
     }
 }

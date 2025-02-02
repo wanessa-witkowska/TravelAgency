@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using TravelAgency.Data;
+﻿using CommunityToolkit.Mvvm.Input;
+using System.Windows.Input;
 using TravelAgency.Interfaces;
 using TravelAgency.Models;
+using TravelAgency.Data;
 
 namespace TravelAgency.ViewModels
 {
@@ -16,6 +12,9 @@ namespace TravelAgency.ViewModels
         private readonly travelAgencyContext _context;
         private readonly IDialogService _dialogService;
 
+        private ICommand? _back;
+        private ICommand? _save;
+
         public int GuideId { get; set; }
 
         public EditGuideViewModel(travelAgencyContext context, IDialogService dialogService)
@@ -24,8 +23,10 @@ namespace TravelAgency.ViewModels
             _dialogService = dialogService;
         }
 
-        public EditGuideViewModel(Guide guide)
+        public EditGuideViewModel(Guide guide, travelAgencyContext context, IDialogService dialogService)
         {
+            _context = context;
+            _dialogService = dialogService;
             _guide = guide;
             FirstName = guide.FirstName;
             LastName = guide.LastName;
@@ -84,14 +85,42 @@ namespace TravelAgency.ViewModels
             }
         }
 
-        public void SaveChanges()
+        public ICommand Back => _back ??= new RelayCommand<object>(NavigateBack);
+
+        private void NavigateBack(object? obj)
         {
-            using (var context = new travelAgencyContext())
+            var instance = MainWindowViewModel.Instance();
+            if (instance != null)
             {
-                context.Guides.Update(_guide);
-                context.SaveChanges();
+                instance.GuidesSubView = new GuidesViewModel(_context, _dialogService);
             }
         }
-    }
 
+        public ICommand Save => _save ??= new RelayCommand<object>(SaveChanges);
+
+        private void SaveChanges(object? obj)
+        {
+            if (!IsValid())
+            {
+                Response = "Please complete all required fields";
+                return;
+            }
+
+            _context.Guides.Update(_guide);
+            _context.SaveChanges();
+
+            Response = "Guide details successfully updated";
+        }
+
+        private bool IsValid()
+        {
+            return !string.IsNullOrEmpty(FirstName) &&
+                   !string.IsNullOrEmpty(LastName) &&
+                   !string.IsNullOrEmpty(Specialization) &&
+                   !string.IsNullOrEmpty(Languages);
+        }
+
+        public string Response { get; set; }
+
+    }
 }

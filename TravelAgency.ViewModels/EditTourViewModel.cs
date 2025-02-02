@@ -1,20 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TravelAgency.Data;
 using TravelAgency.Interfaces;
 using TravelAgency.Models;
+using System.Windows.Input;
+using CommunityToolkit.Mvvm.Input;
 
 namespace TravelAgency.ViewModels
 {
     public class EditTourViewModel : ViewModelBase
     {
+        private Tour _tour;
         private readonly travelAgencyContext _context;
         private readonly IDialogService _dialogService;
+
+        private ICommand? _back;
+        private ICommand? _save;
+
         public int TourId { get; set; }
-        private Tour _tour;
 
         public EditTourViewModel(travelAgencyContext context, IDialogService dialogService)
         {
@@ -25,6 +27,7 @@ namespace TravelAgency.ViewModels
         public EditTourViewModel(Tour tour)
         {
             _tour = tour;
+            TourId = tour.Id;
             Name = tour.Name;
             Description = tour.Description;
             StartDate = tour.StartDate;
@@ -93,13 +96,42 @@ namespace TravelAgency.ViewModels
             }
         }
 
-        public void SaveChanges()
+        public ICommand Back => _back ??= new RelayCommand<object>(NavigateBack);
+
+        private void NavigateBack(object? obj)
         {
-            using (var context = new travelAgencyContext())
+            var instance = MainWindowViewModel.Instance();
+            if (instance != null)
             {
-                context.Tours.Update(_tour);
-                context.SaveChanges();
+                instance.ToursSubView = new ToursViewModel(_context, _dialogService);
             }
         }
+
+        public ICommand Save => _save ??= new RelayCommand<object>(SaveChanges);
+
+        private void SaveChanges(object? obj)
+        {
+            if (!IsValid())
+            {
+                Response = "Please complete all required fields";
+                return;
+            }
+
+            _context.Tours.Update(_tour);
+            _context.SaveChanges();
+
+            Response = "Tour details successfully updated";
+        }
+
+        private bool IsValid()
+        {
+            return !string.IsNullOrEmpty(Name) &&
+                   !string.IsNullOrEmpty(Description) &&
+                   StartDate <= EndDate &&
+                   Price > 0 &&
+                   !string.IsNullOrEmpty(Destination);
+        }
+
+        public string Response { get; set; }
     }
 }

@@ -236,7 +236,7 @@ namespace TravelAgency.ViewModels
                 TourDate = this.TourDate,
                 NumberOfParticipants = this.NumberOfParticipants,
                 TotalPrice = this.TotalPrice,
-                Status = "Pending" // You can set the status as needed
+                Status = "Pending"
             };
 
             _context.Bookings.Add(booking);

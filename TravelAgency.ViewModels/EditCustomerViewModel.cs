@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using CommunityToolkit.Mvvm.Input;
+using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Input;
 using TravelAgency.Data;
 using TravelAgency.Interfaces;
 using TravelAgency.Models;
@@ -15,6 +14,9 @@ namespace TravelAgency.ViewModels
         private readonly travelAgencyContext _context;
         private readonly IDialogService _dialogService;
 
+        private ICommand? _back;
+        private ICommand? _save;
+
         public int CustomerId { get; set; }
 
         public EditCustomerViewModel(travelAgencyContext context, IDialogService dialogService)
@@ -23,25 +25,29 @@ namespace TravelAgency.ViewModels
             _dialogService = dialogService;
         }
 
-
         public EditCustomerViewModel(Customer customer)
         {
-            _customer = customer;
+            _customer = customer; 
             FirstName = customer.FirstName;
             LastName = customer.LastName;
             Email = customer.Email;
             PhoneNumber = customer.PhoneNumber;
         }
 
+
         public string FirstName
         {
-            get => _customer.FirstName;
+            get => _customer?.FirstName ?? string.Empty;  // Zabezpieczenie przed null
             set
             {
-                _customer.FirstName = value;
-                OnPropertyChanged();
+                if (_customer != null)
+                {
+                    _customer.FirstName = value;
+                    OnPropertyChanged();
+                }
             }
         }
+
 
         public string LastName
         {
@@ -73,14 +79,42 @@ namespace TravelAgency.ViewModels
             }
         }
 
-        public void SaveChanges()
+        public ICommand Back => _back ??= new RelayCommand<object>(NavigateBack);
+
+        private void NavigateBack(object? obj)
         {
-            using (var context = new travelAgencyContext())
+            var instance = MainWindowViewModel.Instance();
+            if (instance != null)
             {
-                context.Customers.Update(_customer);
-                context.SaveChanges();
+                instance.CustomersSubView = new CustomersViewModel(_context, _dialogService);
             }
         }
-    }
 
+        public ICommand Save => _save ??= new RelayCommand<object>(SaveChanges);
+
+        private void SaveChanges(object? obj)
+        {
+            if (!IsValid())
+            {
+                Response = "Please complete all required fields";
+                return;
+            }
+
+            _context.Customers.Update(_customer);
+            _context.SaveChanges();
+
+            Response = "Customer details successfully updated";
+        }
+
+        private bool IsValid()
+        {
+            // Dodaj walidację, jeśli potrzebujesz
+            return !string.IsNullOrEmpty(FirstName) &&
+                   !string.IsNullOrEmpty(LastName) &&
+                   !string.IsNullOrEmpty(Email) &&
+                   !string.IsNullOrEmpty(PhoneNumber);
+        }
+
+        public string Response { get; set; }
+    }
 }

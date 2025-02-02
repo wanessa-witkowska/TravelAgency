@@ -7,6 +7,9 @@ using Microsoft.EntityFrameworkCore;
 using TravelAgency.Data;
 using TravelAgency.Interfaces;
 using TravelAgency.Models;
+using System.Windows.Input;
+using CommunityToolkit.Mvvm.Input;
+using System.Collections;
 
 namespace TravelAgency.ViewModels
 {
@@ -15,6 +18,9 @@ namespace TravelAgency.ViewModels
         private Location _location;
         private readonly travelAgencyContext _context;
         private readonly IDialogService _dialogService;
+
+        private ICommand? _back;
+        private ICommand? _save;
 
         public int LocationId { get; set; }
 
@@ -73,13 +79,41 @@ namespace TravelAgency.ViewModels
             }
         }
 
-        public void SaveChanges()
+        public ICommand Back => _back ??= new RelayCommand<object>(NavigateBack);
+
+        private void NavigateBack(object? obj)
         {
-            using (var context = new travelAgencyContext())
+            var instance = MainWindowViewModel.Instance();
+            if (instance != null)
             {
-                context.Locations.Update(_location);
-                context.SaveChanges();
+                instance.LocationsSubView = new LocationsViewModel(_context, _dialogService);
             }
         }
+
+        public ICommand Save => _save ??= new RelayCommand<object>(SaveChanges);
+
+        private void SaveChanges(object? obj)
+        {
+            if (!IsValid())
+            {
+                Response = "Please complete all required fields";
+                return;
+            }
+
+            _context.Locations.Update(_location);
+            _context.SaveChanges();
+
+            Response = "Location details successfully updated";
+        }
+
+        private bool IsValid()
+        {
+            return !string.IsNullOrEmpty(Name) &&
+                   !string.IsNullOrEmpty(Description) &&
+                   !string.IsNullOrEmpty(Address) &&
+                   !string.IsNullOrEmpty(PlaceType);
+        }
+
+        public string Response { get; set; }
     }
 }
