@@ -1,59 +1,91 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using System.Linq;
+﻿using CommunityToolkit.Mvvm.Input;
 using System.Windows.Input;
-using TravelAgency.Data;
 using TravelAgency.Interfaces;
 using TravelAgency.Models;
+using TravelAgency.Data;
 
 namespace TravelAgency.ViewModels
 {
     public class EditGuideViewModel : ViewModelBase
     {
+        private Guide _guide;
         private readonly travelAgencyContext _context;
         private readonly IDialogService _dialogService;
 
-        private int _guideId;
-        public int GuideId
+        private ICommand? _back;
+        private ICommand? _save;
+
+        public int GuideId { get; set; }
+
+        public EditGuideViewModel(travelAgencyContext context, IDialogService dialogService)
         {
-            get => _guideId;
+            _context = context;
+            _dialogService = dialogService;
+        }
+
+        public EditGuideViewModel(Guide guide, travelAgencyContext context, IDialogService dialogService)
+        {
+            _context = context;
+            _dialogService = dialogService;
+            _guide = guide;
+            FirstName = guide.FirstName;
+            LastName = guide.LastName;
+            Specialization = guide.Specialization;
+            ExperienceYears = guide.ExperienceYears;
+            Languages = guide.Languages;
+        }
+
+        public string FirstName
+        {
+            get => _guide.FirstName;
             set
             {
-                _guideId = value;
-                OnPropertyChanged(nameof(GuideId));
-                LoadGuide();
+                _guide.FirstName = value;
+                OnPropertyChanged();
             }
         }
 
-        private Guide? _guide;
-        public Guide? Guide
+        public string LastName
         {
-            get => _guide;
+            get => _guide.LastName;
             set
             {
-                _guide = value;
-                OnPropertyChanged(nameof(Guide));
-                if (_guide != null)
-                {
-                    FirstName = _guide.FirstName;
-                    LastName = _guide.LastName;
-                    Specialization = _guide.Specialization;
-                    ExperienceYears = _guide.ExperienceYears;
-                    Languages = _guide.Languages;
-                }
+                _guide.LastName = value;
+                OnPropertyChanged();
             }
         }
 
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Specialization { get; set; }
-        public int ExperienceYears { get; set; }
-        public string Languages { get; set; }
+        public string Specialization
+        {
+            get => _guide.Specialization;
+            set
+            {
+                _guide.Specialization = value;
+                OnPropertyChanged();
+            }
+        }
 
-        public string Response { get; set; }
+        public int ExperienceYears
+        {
+            get => _guide.ExperienceYears;
+            set
+            {
+                _guide.ExperienceYears = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string Languages
+        {
+            get => _guide.Languages;
+            set
+            {
+                _guide.Languages = value;
+                OnPropertyChanged();
+            }
+        }
 
         public ICommand Back => _back ??= new RelayCommand<object>(NavigateBack);
-        private ICommand? _back;
 
         private void NavigateBack(object? obj)
         {
@@ -65,45 +97,18 @@ namespace TravelAgency.ViewModels
         }
 
         public ICommand Save => _save ??= new RelayCommand<object>(SaveChanges);
-        private ICommand? _save;
 
         private void SaveChanges(object? obj)
         {
-            if (Guide == null)
-            {
-                Response = "No guide selected";
-                return;
-            }
-
             if (!IsValid())
             {
                 Response = "Please complete all required fields";
                 return;
             }
 
-            var existingGuide = _context.Guides.FirstOrDefault(g => g.Id == Guide.Id);
-            if (existingGuide != null)
-            {
-                existingGuide.FirstName = FirstName;
-                existingGuide.LastName = LastName;
-                existingGuide.Specialization = Specialization;
-                existingGuide.ExperienceYears = ExperienceYears;
-                existingGuide.Languages = Languages;
-            }
-            else
-            {
-                var newGuide = new Guide
-                {
-                    FirstName = FirstName,
-                    LastName = LastName,
-                    Specialization = Specialization,
-                    ExperienceYears = ExperienceYears,
-                    Languages = Languages
-                };
-                _context.Guides.Add(newGuide);
-            }
-
+            _context.Guides.Update(_guide);
             _context.SaveChanges();
+
             Response = "Guide details successfully updated";
         }
 
@@ -112,19 +117,10 @@ namespace TravelAgency.ViewModels
             return !string.IsNullOrEmpty(FirstName) &&
                    !string.IsNullOrEmpty(LastName) &&
                    !string.IsNullOrEmpty(Specialization) &&
-                   ExperienceYears >= 0 &&
                    !string.IsNullOrEmpty(Languages);
         }
 
-        public EditGuideViewModel(travelAgencyContext context, IDialogService dialogService)
-        {
-            _context = context;
-            _dialogService = dialogService;
-        }
+        public string Response { get; set; }
 
-        private void LoadGuide()
-        {
-            Guide = _context.Guides.FirstOrDefault(g => g.Id == GuideId);
-        }
     }
 }

@@ -1,6 +1,5 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using System.Collections.Generic;
+﻿using CommunityToolkit.Mvvm.Input;
+using System;
 using System.Linq;
 using System.Windows.Input;
 using TravelAgency.Data;
@@ -11,48 +10,76 @@ namespace TravelAgency.ViewModels
 {
     public class EditCustomerViewModel : ViewModelBase
     {
+        private Customer _customer;
         private readonly travelAgencyContext _context;
         private readonly IDialogService _dialogService;
 
-        private int _customerId;
-        public int CustomerId
+        private ICommand? _back;
+        private ICommand? _save;
+
+        public int CustomerId { get; set; }
+
+        public EditCustomerViewModel(travelAgencyContext context, IDialogService dialogService)
         {
-            get => _customerId;
-            set
-            {
-                _customerId = value;
-                OnPropertyChanged(nameof(CustomerId));
-                LoadCustomer();
-            }
+            _context = context;
+            _dialogService = dialogService;
         }
 
-        private Customer? _customer;
-        public Customer? Customer
+        public EditCustomerViewModel(Customer customer)
         {
-            get => _customer;
+            _customer = customer; 
+            FirstName = customer.FirstName;
+            LastName = customer.LastName;
+            Email = customer.Email;
+            PhoneNumber = customer.PhoneNumber;
+        }
+
+
+        public string FirstName
+        {
+            get => _customer?.FirstName ?? string.Empty;  // Zabezpieczenie przed null
             set
             {
-                _customer = value;
-                OnPropertyChanged(nameof(Customer));
                 if (_customer != null)
                 {
-                    FirstName = _customer.FirstName;
-                    LastName = _customer.LastName;
-                    Email = _customer.Email;
-                    PhoneNumber = _customer.PhoneNumber;
+                    _customer.FirstName = value;
+                    OnPropertyChanged();
                 }
             }
         }
 
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Email { get; set; }
-        public string PhoneNumber { get; set; }
 
-        public string Response { get; set; }
+        public string LastName
+        {
+            get => _customer.LastName;
+            set
+            {
+                _customer.LastName = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string Email
+        {
+            get => _customer.Email;
+            set
+            {
+                _customer.Email = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string PhoneNumber
+        {
+            get => _customer.PhoneNumber;
+            set
+            {
+                _customer.PhoneNumber = value;
+                OnPropertyChanged();
+            }
+        }
 
         public ICommand Back => _back ??= new RelayCommand<object>(NavigateBack);
-        private ICommand? _back;
 
         private void NavigateBack(object? obj)
         {
@@ -64,63 +91,30 @@ namespace TravelAgency.ViewModels
         }
 
         public ICommand Save => _save ??= new RelayCommand<object>(SaveChanges);
-        private ICommand? _save;
 
         private void SaveChanges(object? obj)
         {
-            if (Customer == null)
-            {
-                Response = "No customer selected";
-                return;
-            }
-
             if (!IsValid())
             {
                 Response = "Please complete all required fields";
                 return;
             }
 
-            var existingCustomer = _context.Customers.FirstOrDefault(c => c.Id == Customer.Id);
-            if (existingCustomer != null)
-            {
-                existingCustomer.FirstName = FirstName;
-                existingCustomer.LastName = LastName;
-                existingCustomer.Email = Email;
-                existingCustomer.PhoneNumber = PhoneNumber;
-            }
-            else
-            {
-                var newCustomer = new Customer
-                {
-                    FirstName = FirstName,
-                    LastName = LastName,
-                    Email = Email,
-                    PhoneNumber = PhoneNumber
-                };
-                _context.Customers.Add(newCustomer);
-            }
-
+            _context.Customers.Update(_customer);
             _context.SaveChanges();
+
             Response = "Customer details successfully updated";
         }
 
         private bool IsValid()
         {
+            // Dodaj walidację, jeśli potrzebujesz
             return !string.IsNullOrEmpty(FirstName) &&
                    !string.IsNullOrEmpty(LastName) &&
                    !string.IsNullOrEmpty(Email) &&
                    !string.IsNullOrEmpty(PhoneNumber);
         }
 
-        public EditCustomerViewModel(travelAgencyContext context, IDialogService dialogService)
-        {
-            _context = context;
-            _dialogService = dialogService;
-        }
-
-        private void LoadCustomer()
-        {
-            Customer = _context.Customers.FirstOrDefault(c => c.Id == CustomerId);
-        }
+        public string Response { get; set; }
     }
 }

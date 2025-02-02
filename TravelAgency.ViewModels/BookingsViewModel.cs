@@ -5,7 +5,6 @@ using System.Windows.Input;
 using TravelAgency.Data;
 using TravelAgency.Interfaces;
 using TravelAgency.Models;
-using TravelAgency.ViewModels;
 
 namespace TravelAgency.ViewModels
 {

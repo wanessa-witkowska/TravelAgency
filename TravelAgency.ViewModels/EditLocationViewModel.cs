@@ -1,57 +1,85 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using System.Windows.Input;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using TravelAgency.Data;
 using TravelAgency.Interfaces;
 using TravelAgency.Models;
+using System.Windows.Input;
+using CommunityToolkit.Mvvm.Input;
+using System.Collections;
 
 namespace TravelAgency.ViewModels
 {
     public class EditLocationViewModel : ViewModelBase
     {
+        private Location _location;
         private readonly travelAgencyContext _context;
         private readonly IDialogService _dialogService;
 
-        private int _locationId;
-        public int LocationId
+        private ICommand? _back;
+        private ICommand? _save;
+
+        public int LocationId { get; set; }
+
+        public EditLocationViewModel(travelAgencyContext context, IDialogService dialogService)
         {
-            get => _locationId;
+            _context = context;
+            _dialogService = dialogService;
+        }
+
+        public EditLocationViewModel(Location location)
+        {
+            _location = location;
+            Name = location.Name;
+            Description = location.Description;
+            Address = location.Address;
+            PlaceType = location.PlaceType;
+        }
+
+        public string Name
+        {
+            get => _location.Name;
             set
             {
-                _locationId = value;
-                OnPropertyChanged(nameof(LocationId));
-                LoadLocation();
+                _location.Name = value;
+                OnPropertyChanged();
             }
         }
 
-        private Location? _location;
-        public Location? Location
+        public string Description
         {
-            get => _location;
+            get => _location.Description;
             set
             {
-                _location = value;
-                OnPropertyChanged(nameof(Location));
-                if (_location != null)
-                {
-                    Name = _location.Name;
-                    Description = _location.Description;
-                    Address = _location.Address;
-                    PlaceType = _location.PlaceType;
-                }
+                _location.Description = value;
+                OnPropertyChanged();
             }
         }
 
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public string Address { get; set; }
-        public string PlaceType { get; set; }
+        public string Address
+        {
+            get => _location.Address;
+            set
+            {
+                _location.Address = value;
+                OnPropertyChanged();
+            }
+        }
 
-        public string Response { get; set; }
+        public string PlaceType
+        {
+            get => _location.PlaceType;
+            set
+            {
+                _location.PlaceType = value;
+                OnPropertyChanged();
+            }
+        }
 
         public ICommand Back => _back ??= new RelayCommand<object>(NavigateBack);
-        private ICommand? _back;
 
         private void NavigateBack(object? obj)
         {
@@ -63,43 +91,18 @@ namespace TravelAgency.ViewModels
         }
 
         public ICommand Save => _save ??= new RelayCommand<object>(SaveChanges);
-        private ICommand? _save;
 
         private void SaveChanges(object? obj)
         {
-            if (Location == null)
-            {
-                Response = "No location selected";
-                return;
-            }
-
             if (!IsValid())
             {
                 Response = "Please complete all required fields";
                 return;
             }
 
-            var existingLocation = _context.Locations.FirstOrDefault(l => l.Id == Location.Id);
-            if (existingLocation != null)
-            {
-                existingLocation.Name = Name;
-                existingLocation.Description = Description;
-                existingLocation.Address = Address;
-                existingLocation.PlaceType = PlaceType;
-            }
-            else
-            {
-                var newLocation = new Location
-                {
-                    Name = Name,
-                    Description = Description,
-                    Address = Address,
-                    PlaceType = PlaceType
-                };
-                _context.Locations.Add(newLocation);
-            }
-
+            _context.Locations.Update(_location);
             _context.SaveChanges();
+
             Response = "Location details successfully updated";
         }
 
@@ -111,15 +114,6 @@ namespace TravelAgency.ViewModels
                    !string.IsNullOrEmpty(PlaceType);
         }
 
-        public EditLocationViewModel(travelAgencyContext context, IDialogService dialogService)
-        {
-            _context = context;
-            _dialogService = dialogService;
-        }
-
-        private void LoadLocation()
-        {
-            Location = _context.Locations.FirstOrDefault(l => l.Id == LocationId);
-        }
+        public string Response { get; set; }
     }
 }

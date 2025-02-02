@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System;
-using System.ComponentModel.DataAnnotations;
 
 namespace TravelAgency.Models
 {
+    using System;
+    using System.ComponentModel.DataAnnotations;
+
     public class Location
     {
         public int Id { get; set; }
