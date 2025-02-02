@@ -1,12 +1,7 @@
-﻿using CommunityToolkit.Mvvm.Input;
-using Microsoft.EntityFrameworkCore;
-using System;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using TravelAgency.Data;
 using TravelAgency.Interfaces;
@@ -14,253 +9,147 @@ using TravelAgency.Models;
 
 namespace TravelAgency.ViewModels
 {
-    public class EditBookingViewModel : ViewModelBase, IDataErrorInfo
+    public class EditBookingViewModel : ViewModelBase
     {
         private readonly travelAgencyContext _context;
         private readonly IDialogService _dialogService;
-        private Booking? _booking = new Booking();
 
-        public string Error
+        private int _bookingId;
+        public int BookingId
         {
-            get { return string.Empty; }
-        }
-
-        public string this[string columnName]
-        {
-            get
-            {
-                if (columnName == "TourId")
-                {
-                    if (TourId <= 0)
-                    {
-                        return "Tour is Required";
-                    }
-                }
-                if (columnName == "CustomerId")
-                {
-                    if (CustomerId <= 0)
-                    {
-                        return "Customer is Required";
-                    }
-                }
-                if (columnName == "BookingDate")
-                {
-                    if (BookingDate == default)
-                    {
-                        return "Booking Date is Required";
-                    }
-                }
-                if (columnName == "TourDate")
-                {
-                    if (TourDate == default)
-                    {
-                        return "Tour Date is Required";
-                    }
-                }
-                if (columnName == "NumberOfParticipants")
-                {
-                    if (NumberOfParticipants <= 0)
-                    {
-                        return "Number of Participants must be greater than zero";
-                    }
-                }
-                if (columnName == "TotalPrice")
-                {
-                    if (TotalPrice <= 0)
-                    {
-                        return "Total Price must be greater than zero";
-                    }
-                }
-                return string.Empty;
-            }
-        }
-
-        private int _tourId = 0;
-        public int TourId
-        {
-            get { return _tourId; }
-            set
-            {
-                _tourId = value;
-                OnPropertyChanged(nameof(TourId));
-            }
-        }
-
-        private int _customerId = 0;
-        public int CustomerId
-        {
-            get { return _customerId; }
-            set
-            {
-                _customerId = value;
-                OnPropertyChanged(nameof(CustomerId));
-            }
-        }
-
-        private DateTime _bookingDate = default;
-        public DateTime BookingDate
-        {
-            get { return _bookingDate; }
-            set
-            {
-                _bookingDate = value;
-                OnPropertyChanged(nameof(BookingDate));
-            }
-        }
-
-        private DateTime _tourDate = default;
-        public DateTime TourDate
-        {
-            get { return _tourDate; }
-            set
-            {
-                _tourDate = value;
-                OnPropertyChanged(nameof(TourDate));
-            }
-        }
-
-        private int _numberOfParticipants = 0;
-        public int NumberOfParticipants
-        {
-            get { return _numberOfParticipants; }
-            set
-            {
-                _numberOfParticipants = value;
-                OnPropertyChanged(nameof(NumberOfParticipants));
-            }
-        }
-
-        private decimal _totalPrice = 0;
-        public decimal TotalPrice
-        {
-            get { return _totalPrice; }
-            set
-            {
-                _totalPrice = value;
-                OnPropertyChanged(nameof(TotalPrice));
-            }
-        }
-
-        private string _response = string.Empty;
-        public string Response
-        {
-            get { return _response; }
-            set
-            {
-                _response = value;
-                OnPropertyChanged(nameof(Response));
-            }
-        }
-
-        private long _bookingId = 0;
-        public long BookingId
-        {
-            get { return _bookingId; }
+            get => _bookingId;
             set
             {
                 _bookingId = value;
                 OnPropertyChanged(nameof(BookingId));
-                LoadBookingData();
+                LoadBooking();
             }
         }
 
-        private ObservableCollection<Tour>? _tours = null;
-        public ObservableCollection<Tour>? Tours
+        private Booking? _booking;
+        public Booking? Booking
         {
-            get
-            {
-                if (_tours is null)
-                {
-                    _tours = LoadTours();
-                    return _tours;
-                }
-                return _tours;
-            }
+            get => _booking;
             set
             {
-                _tours = value;
-                OnPropertyChanged(nameof(Tours));
+                _booking = value;
+                OnPropertyChanged(nameof(Booking));
+                if (_booking != null)
+                {
+                    CustomerId = _booking.CustomerId;
+                    TourId = _booking.TourId;
+                    NumberOfParticipants = _booking.NumberOfParticipants;
+                    BookingDate = _booking.BookingDate;
+                    TourDate = _booking.TourDate;
+                    TotalPrice = _booking.TotalPrice;
+                    Status = _booking.Status;
+                }
             }
         }
 
-        private ObservableCollection<Customer>? _customers = null;
-        public ObservableCollection<Customer>? Customers
+        public int CustomerId { get; set; }
+        public int TourId { get; set; }
+        public int NumberOfParticipants { get; set; }
+        public DateTime? BookingDate { get; set; }
+        public DateTime? TourDate { get; set; }
+        public decimal TotalPrice { get; set; }
+
+        private string _status;
+        public string Status
         {
-            get
-            {
-                if (_customers is null)
-                {
-                    _customers = LoadCustomers();
-                    return _customers;
-                }
-                return _customers;
-            }
+            get => _status;
             set
             {
-                _customers = value;
-                OnPropertyChanged(nameof(Customers));
+                _status = value;
+                OnPropertyChanged(nameof(Status));
             }
         }
 
-        private ICommand? _back = null;
-        public ICommand Back
+        public List<string> Statuses { get; } = new List<string>
         {
-            get
-            {
-                if (_back is null)
-                {
-                    _back = new RelayCommand<object>(NavigateBack);
-                }
-                return _back;
-            }
-        }
+            "Pending",
+            "Confirmed",
+            "Cancelled",
+            "Completed"
+        };
+
+        public string Response { get; set; }
+
+        public ICommand Back => _back ??= new RelayCommand<object>(NavigateBack);
+        private ICommand? _back;
 
         private void NavigateBack(object? obj)
         {
             var instance = MainWindowViewModel.Instance();
-            if (instance is not null)
+            if (instance != null)
             {
                 instance.BookingsSubView = new BookingsViewModel(_context, _dialogService);
             }
         }
 
-        private ICommand? _save = null;
-        public ICommand Save
-        {
-            get
-            {
-                if (_save is null)
-                {
-                    _save = new RelayCommand<object>(SaveData);
-                }
-                return _save;
-            }
-        }
+        public ICommand Save => _save ??= new RelayCommand<object>(SaveChanges);
+        private ICommand? _save;
 
-        private void SaveData(object? obj)
+        private void SaveChanges(object? obj)
         {
+            if (Booking == null)
+            {
+                Response = "No booking selected";
+                return;
+            }
+
             if (!IsValid())
             {
                 Response = "Please complete all required fields";
                 return;
             }
 
-            if (_booking is null)
+            var existingBooking = _context.Bookings.FirstOrDefault(b => b.Id == Booking.Id);
+            if (existingBooking != null)
             {
-                return;
+                existingBooking.CustomerId = CustomerId;
+                existingBooking.TourId = TourId;
+
+                if (BookingDate == null || TourDate == null)
+                {
+                    Response = "Please select both booking date and tour date.";
+                    return;
+                }
+
+                existingBooking.BookingDate = BookingDate.Value;
+                existingBooking.TourDate = TourDate.Value;
+                existingBooking.NumberOfParticipants = NumberOfParticipants;
+                existingBooking.TotalPrice = TotalPrice;
+                existingBooking.Status = Status;
+            }
+            else
+            {
+                var newBooking = new Booking
+                {
+                    CustomerId = CustomerId,
+                    TourId = TourId,
+                    BookingDate = BookingDate ?? DateTime.MinValue,
+                    TourDate = TourDate ?? DateTime.MinValue,
+                    NumberOfParticipants = NumberOfParticipants,
+                    TotalPrice = TotalPrice,
+                    Status = Status
+                };
+                _context.Bookings.Add(newBooking);
             }
 
-            _booking.TourId = TourId;
-            _booking.CustomerId = CustomerId;
-            _booking.BookingDate = BookingDate;
-            _booking.TourDate = TourDate;
-            _booking.NumberOfParticipants = NumberOfParticipants;
-            _booking.TotalPrice = TotalPrice;
-
-            _context.Entry(_booking).State = EntityState.Modified;
             _context.SaveChanges();
+            Response = "Booking details successfully updated";
+        }
 
-            Response = "Data Updated";
+        private bool IsValid()
+        {
+            return CustomerId > 0 &&
+                   TourId > 0 &&
+                   NumberOfParticipants > 0 &&
+                   BookingDate != null &&
+                   TourDate != null &&
+                   TotalPrice > 0 &&
+                   !string.IsNullOrEmpty(Status);
         }
 
         public EditBookingViewModel(travelAgencyContext context, IDialogService dialogService)
@@ -269,53 +158,9 @@ namespace TravelAgency.ViewModels
             _dialogService = dialogService;
         }
 
-        private ObservableCollection<Tour> LoadTours()
+        private void LoadBooking()
         {
-            _context.Database.EnsureCreated();
-            _context.Tours.Load();
-            return _context.Tours.Local.ToObservableCollection();
+            Booking = _context.Bookings.FirstOrDefault(b => b.Id == BookingId);
         }
-
-        private ObservableCollection<Customer> LoadCustomers()
-        {
-            _context.Database.EnsureCreated();
-            _context.Customers.Load();
-            return _context.Customers.Local.ToObservableCollection();
-        }
-
-        private bool IsValid()
-        {
-            string[] properties = { "TourId", "CustomerId", "BookingDate", "TourDate", "NumberOfParticipants", "TotalPrice" };
-            foreach (string property in properties)
-            {
-                if (!string.IsNullOrEmpty(this[property]))
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
-
-        private void LoadBookingData()
-        {
-            if (_context?.Bookings is null)
-            {
-                return;
-            }
-
-            _booking = _context.Bookings.Find((int)BookingId);
-            if (_booking is null)
-            {
-                return;
-            }
-
-            this.TourId = _booking.TourId;
-            this.CustomerId = _booking.CustomerId;
-            this.BookingDate = _booking.BookingDate;
-            this.TourDate = _booking.TourDate;
-            this.NumberOfParticipants = _booking.NumberOfParticipants;
-            this.TotalPrice = _booking.TotalPrice;
-        }
-
     }
 }

@@ -1,102 +1,66 @@
-﻿using System;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using System.Linq;
+using System.Windows.Input;
 using TravelAgency.Data;
 using TravelAgency.Interfaces;
 using TravelAgency.Models;
-using System.Windows.Input;
-using CommunityToolkit.Mvvm.Input;
 
 namespace TravelAgency.ViewModels
 {
     public class EditTourViewModel : ViewModelBase
     {
-        private Tour _tour;
         private readonly travelAgencyContext _context;
         private readonly IDialogService _dialogService;
 
-        private ICommand? _back;
-        private ICommand? _save;
-
-        public int TourId { get; set; }
-
-        public EditTourViewModel(travelAgencyContext context, IDialogService dialogService)
+        private int _tourId;
+        public int TourId
         {
-            _context = context;
-            _dialogService = dialogService;
-        }
-
-        public EditTourViewModel(Tour tour)
-        {
-            _tour = tour;
-            TourId = tour.Id;
-            Name = tour.Name;
-            Description = tour.Description;
-            StartDate = tour.StartDate;
-            EndDate = tour.EndDate;
-            Price = tour.Price;
-            Destination = tour.Destination;
-        }
-
-        public string Name
-        {
-            get => _tour.Name;
+            get => _tourId;
             set
             {
-                _tour.Name = value;
-                OnPropertyChanged();
+                _tourId = value;
+                OnPropertyChanged(nameof(TourId));
+                LoadTour();
             }
         }
 
-        public string Description
+        private Tour? _tour;
+        public Tour? Tour
         {
-            get => _tour.Description;
+            get => _tour;
             set
             {
-                _tour.Description = value;
-                OnPropertyChanged();
+                _tour = value;
+                OnPropertyChanged(nameof(Tour));
+                if (_tour != null)
+                {
+                    Name = _tour.Name;
+                    Description = _tour.Description;
+                    StartDate = _tour.StartDate;
+                    EndDate = _tour.EndDate;
+                    Price = _tour.Price;
+                    Destination = _tour.Destination;
+                    GuideId = _tour.GuideId;
+                }
             }
         }
 
-        public DateTime StartDate
-        {
-            get => _tour.StartDate;
-            set
-            {
-                _tour.StartDate = value;
-                OnPropertyChanged();
-            }
-        }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public decimal Price { get; set; }
+        public string Destination { get; set; }
+        public int GuideId { get; set; }
 
-        public DateTime EndDate
-        {
-            get => _tour.EndDate;
-            set
-            {
-                _tour.EndDate = value;
-                OnPropertyChanged();
-            }
-        }
+        public string Response { get; set; }
 
-        public decimal Price
-        {
-            get => _tour.Price;
-            set
-            {
-                _tour.Price = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public string Destination
-        {
-            get => _tour.Destination;
-            set
-            {
-                _tour.Destination = value;
-                OnPropertyChanged();
-            }
-        }
+        // Właściwość do przechowywania listy przewodników
+        public IEnumerable<Guide> Guides { get; set; }
 
         public ICommand Back => _back ??= new RelayCommand<object>(NavigateBack);
+        private ICommand? _back;
 
         private void NavigateBack(object? obj)
         {
@@ -108,18 +72,49 @@ namespace TravelAgency.ViewModels
         }
 
         public ICommand Save => _save ??= new RelayCommand<object>(SaveChanges);
+        private ICommand? _save;
 
         private void SaveChanges(object? obj)
         {
+            if (Tour == null)
+            {
+                Response = "No tour selected";
+                return;
+            }
+
             if (!IsValid())
             {
                 Response = "Please complete all required fields";
                 return;
             }
 
-            _context.Tours.Update(_tour);
-            _context.SaveChanges();
+            var existingTour = _context.Tours.FirstOrDefault(t => t.Id == Tour.Id);
+            if (existingTour != null)
+            {
+                existingTour.Name = Name;
+                existingTour.Description = Description;
+                existingTour.StartDate = StartDate;
+                existingTour.EndDate = EndDate;
+                existingTour.Price = Price;
+                existingTour.Destination = Destination;
+                existingTour.GuideId = GuideId;
+            }
+            else
+            {
+                var newTour = new Tour
+                {
+                    Name = Name,
+                    Description = Description,
+                    StartDate = StartDate,
+                    EndDate = EndDate,
+                    Price = Price,
+                    Destination = Destination,
+                    GuideId = GuideId
+                };
+                _context.Tours.Add(newTour);
+            }
 
+            _context.SaveChanges();
             Response = "Tour details successfully updated";
         }
 
@@ -127,11 +122,25 @@ namespace TravelAgency.ViewModels
         {
             return !string.IsNullOrEmpty(Name) &&
                    !string.IsNullOrEmpty(Description) &&
-                   StartDate <= EndDate &&
+                   StartDate != null &&
+                   EndDate != null &&
                    Price > 0 &&
-                   !string.IsNullOrEmpty(Destination);
+                   !string.IsNullOrEmpty(Destination) &&
+                   GuideId > 0;
         }
 
-        public string Response { get; set; }
+        public EditTourViewModel(travelAgencyContext context, IDialogService dialogService)
+        {
+            _context = context;
+            _dialogService = dialogService;
+
+            // Pobranie wszystkich przewodników z bazy danych
+            Guides = _context.Guides.ToList();
+        }
+
+        private void LoadTour()
+        {
+            Tour = _context.Tours.FirstOrDefault(t => t.Id == TourId);
+        }
     }
 }
