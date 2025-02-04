@@ -33,43 +33,43 @@
                 <!-- Name -->
                 <WrapPanel Margin="0,0,0,5">
                     <TextBlock Text="Name" Style="{StaticResource PrimaryTextBlock}" />
-                    <TextBox Text="{Binding Tour.Name, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" />
+                    <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource PrimaryTextBox}" />
                 </WrapPanel>
 
                 <!-- Description -->
                 <WrapPanel Margin="0,0,0,5">
                     <TextBlock Text="Description" Style="{StaticResource PrimaryTextBlock}" />
-                    <TextBox Text="{Binding Tour.Description, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" />
+                    <TextBox Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource PrimaryTextBox}" />
                 </WrapPanel>
 
                 <!-- Start Date -->
                 <WrapPanel Margin="0,0,0,5">
                     <TextBlock Text="Start Date" Style="{StaticResource PrimaryTextBlock}" />
-                    <DatePicker SelectedDate="{Binding Tour.StartDate}" Style="{StaticResource PrimaryDatePicker}" />
+                    <DatePicker SelectedDate="{Binding StartDate}" Style="{StaticResource PrimaryDatePicker}" />
                 </WrapPanel>
 
                 <!-- End Date -->
                 <WrapPanel Margin="0,0,0,5">
                     <TextBlock Text="End Date" Style="{StaticResource PrimaryTextBlock}" />
-                    <DatePicker SelectedDate="{Binding Tour.EndDate}" Style="{StaticResource PrimaryDatePicker}" />
+                    <DatePicker SelectedDate="{Binding EndDate}" Style="{StaticResource PrimaryDatePicker}" />
                 </WrapPanel>
 
                 <!-- Price -->
                 <WrapPanel Margin="0,0,0,5">
                     <TextBlock Text="Price" Style="{StaticResource PrimaryTextBlock}" />
-                    <TextBox Text="{Binding Tour.Price, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" />
+                    <TextBox Text="{Binding Price, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource PrimaryTextBox}" />
                 </WrapPanel>
 
                 <!-- Destination -->
                 <WrapPanel Margin="0,0,0,5">
                     <TextBlock Text="Destination" Style="{StaticResource PrimaryTextBlock}" />
-                    <TextBox Text="{Binding Tour.Destination, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" />
+                    <TextBox Text="{Binding Destination, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource PrimaryTextBox}" />
                 </WrapPanel>
 
                 <!-- Guide Selection -->
                 <WrapPanel Margin="0,0,0,5">
                     <TextBlock Text="Guide" Style="{StaticResource PrimaryTextBlock}" />
-                    <ComboBox ItemsSource="{Binding Guides}" SelectedItem="{Binding Tour.Guide}" DisplayMemberPath="FullName" Style="{StaticResource PrimaryComboBox}" />
+                    <ComboBox ItemsSource="{Binding Guides}" SelectedItem="{Binding GuideId}" DisplayMemberPath="FullName" Style="{StaticResource PrimaryComboBox}" />
                 </WrapPanel>
             </StackPanel>
         </GroupBox>

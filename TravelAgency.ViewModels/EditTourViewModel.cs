@@ -19,9 +19,12 @@ namespace TravelAgency.ViewModels
             get => _tourId;
             set
             {
-                _tourId = value;
-                OnPropertyChanged(nameof(TourId));
-                LoadTour();
+                if (_tourId != value)
+                {
+                    _tourId = value;
+                    OnPropertyChanged(nameof(TourId));
+                    LoadTour();
+                }
             }
         }
 
@@ -31,32 +34,125 @@ namespace TravelAgency.ViewModels
             get => _tour;
             set
             {
-                _tour = value;
-                OnPropertyChanged(nameof(Tour));
-                if (_tour != null)
+                if (_tour != value)
                 {
-                    Name = _tour.Name;
-                    Description = _tour.Description;
-                    StartDate = _tour.StartDate;
-                    EndDate = _tour.EndDate;
-                    Price = _tour.Price;
-                    Destination = _tour.Destination;
-                    GuideId = _tour.GuideId;
+                    _tour = value;
+                    OnPropertyChanged(nameof(Tour));
+
+                    if (_tour != null)
+                    {
+                        Name = _tour.Name;
+                        Description = _tour.Description;
+                        StartDate = _tour.StartDate;
+                        EndDate = _tour.EndDate;
+                        Price = _tour.Price;
+                        Destination = _tour.Destination;
+                        GuideId = _tour.GuideId;
+                    }
                 }
             }
         }
 
-        public string Name { get; set; } = string.Empty;
-        public string Description { get; set; } = string.Empty;
-        public DateTime StartDate { get; set; } = DateTime.Today;
-        public DateTime EndDate { get; set; } = DateTime.Today;
-        public decimal Price { get; set; } = 0; 
-        public string Destination { get; set; } = string.Empty;
-        public int GuideId { get; set; } = 0;
+        private string _name = string.Empty;
+        public string Name
+        {
+            get => _name;
+            set
+            {
+                if (_name != value)
+                {
+                    _name = value;
+                    OnPropertyChanged(nameof(Name));
+                }
+            }
+        }
+
+        private string _description = string.Empty;
+        public string Description
+        {
+            get => _description;
+            set
+            {
+                if (_description != value)
+                {
+                    _description = value;
+                    OnPropertyChanged(nameof(Description));
+                }
+            }
+        }
+
+        private DateTime _startDate = DateTime.Today;
+        public DateTime StartDate
+        {
+            get => _startDate;
+            set
+            {
+                if (_startDate != value)
+                {
+                    _startDate = value;
+                    OnPropertyChanged(nameof(StartDate));
+                }
+            }
+        }
+
+        private DateTime _endDate = DateTime.Today;
+        public DateTime EndDate
+        {
+            get => _endDate;
+            set
+            {
+                if (_endDate != value)
+                {
+                    _endDate = value;
+                    OnPropertyChanged(nameof(EndDate));
+                }
+            }
+        }
+
+        private decimal _price = 0;
+        public decimal Price
+        {
+            get => _price;
+            set
+            {
+                if (_price != value)
+                {
+                    _price = value;
+                    OnPropertyChanged(nameof(Price));
+                }
+            }
+        }
+
+        private string _destination = string.Empty;
+        public string Destination
+        {
+            get => _destination;
+            set
+            {
+                if (_destination != value)
+                {
+                    _destination = value;
+                    OnPropertyChanged(nameof(Destination));
+                }
+            }
+        }
+
+        private int _guideId = 0;
+        public int GuideId
+        {
+            get => _guideId;
+            set
+            {
+                if (_guideId != value)
+                {
+                    _guideId = value;
+                    OnPropertyChanged(nameof(GuideId));
+                }
+            }
+        }
 
         public string Response { get; set; }
 
-        // Właściwość do przechowywania listy przewodników
         public IEnumerable<Guide> Guides { get; set; }
 
         public ICommand Back => _back ??= new RelayCommand<object>(NavigateBack);
@@ -133,12 +229,10 @@ namespace TravelAgency.ViewModels
         {
             _context = context;
             _dialogService = dialogService;
-
-            // Pobranie wszystkich przewodników z bazy danych
             Guides = _context.Guides.ToList();
         }
 
-        private void LoadTour()
+        public void LoadTour()
         {
             Tour = _context.Tours.FirstOrDefault(t => t.Id == TourId);
         }

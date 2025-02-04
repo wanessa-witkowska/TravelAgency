@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Linq;
 using System.Windows.Input;
 using TravelAgency.Data;
@@ -122,34 +123,48 @@ namespace TravelAgency.ViewModels
                 return;
             }
 
-            if (Customer == null)
+            try
             {
-                Customer = new Customer();
-                _context.Customers.Add(Customer);
-            }
-            else
-            {
-                var existingCustomer = _context.Customers.Find(Customer.Id);
-                if (existingCustomer != null)
+                if (Customer == null)
                 {
-                    existingCustomer.FirstName = FirstName;
-                    existingCustomer.LastName = LastName;
-                    existingCustomer.Email = Email;
-                    existingCustomer.PhoneNumber = PhoneNumber;
-                    _context.Entry(existingCustomer).State = EntityState.Modified;
+                    Customer = new Customer
+                    {
+                        FirstName = FirstName,
+                        LastName = LastName,
+                        Email = Email,
+                        PhoneNumber = PhoneNumber
+                    };
+                    _context.Customers.Add(Customer);
                 }
                 else
                 {
-                    Customer.FirstName = FirstName;
-                    Customer.LastName = LastName;
-                    Customer.Email = Email;
-                    Customer.PhoneNumber = PhoneNumber;
-                    _context.Customers.Add(Customer);
+                    var existingCustomer = _context.Customers.Find(Customer.Id);
+                    if (existingCustomer != null)
+                    {
+                        existingCustomer.FirstName = FirstName;
+                        existingCustomer.LastName = LastName;
+                        existingCustomer.Email = Email;
+                        existingCustomer.PhoneNumber = PhoneNumber;
+                        _context.Entry(existingCustomer).State = EntityState.Modified;
+                        OnPropertyChanged(nameof(Customer)); // 🔥 Aktualizacja UI
+                    }
+                    else
+                    {
+                        Customer.FirstName = FirstName;
+                        Customer.LastName = LastName;
+                        Customer.Email = Email;
+                        Customer.PhoneNumber = PhoneNumber;
+                        _context.Customers.Add(Customer);
+                    }
                 }
-            }
 
-            _context.SaveChanges();
-            Response = "Customer details successfully updated";
+                _context.SaveChanges();
+                Response = "Customer details successfully updated";
+            }
+            catch (Exception ex)
+            {
+                Response = $"Error: {ex.Message}";
+            }
         }
 
         private bool IsValid()

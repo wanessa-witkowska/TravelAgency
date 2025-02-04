@@ -33,31 +33,31 @@
                 <!-- First Name -->
                 <WrapPanel Margin="0,0,0,5">
                     <TextBlock Text="First Name" Style="{StaticResource PrimaryTextBlock}" Width="77" />
-                    <TextBox Text="{Binding Guide.FirstName, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" />
+                    <TextBox Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource PrimaryTextBox}" />
                 </WrapPanel>
 
                 <!-- Last Name -->
                 <WrapPanel Margin="0,0,0,5">
                     <TextBlock Text="Last Name" Style="{StaticResource PrimaryTextBlock}" Width="77" />
-                    <TextBox Text="{Binding Guide.LastName, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" />
+                    <TextBox Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource PrimaryTextBox}" />
                 </WrapPanel>
 
                 <!-- Specialization -->
                 <WrapPanel Margin="0,0,0,5">
                     <TextBlock Text="Specialization" Style="{StaticResource PrimaryTextBlock}" Width="77" />
-                    <TextBox Text="{Binding Guide.Specialization, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" />
+                    <TextBox Text="{Binding Specialization, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource PrimaryTextBox}" />
                 </WrapPanel>
 
                 <!-- Experience Years -->
                 <WrapPanel Margin="0,0,0,5">
                     <TextBlock Text="Experience" Style="{StaticResource PrimaryTextBlock}" Width="77" />
-                    <TextBox Text="{Binding Guide.ExperienceYears, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" />
+                    <TextBox Text="{Binding ExperienceYears, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Style="{StaticResource PrimaryTextBox}" />
                 </WrapPanel>
 
                 <!-- Languages -->
                 <WrapPanel Margin="0,0,0,5">
                     <TextBlock Text="Languages" Style="{StaticResource PrimaryTextBlock}" Width="77" />
-                    <TextBox Text="{Binding Guide.Languages, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" />
+                    <TextBox Text="{Binding Languages, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource PrimaryTextBox}" />
                 </WrapPanel>
             </StackPanel>
         </GroupBox>

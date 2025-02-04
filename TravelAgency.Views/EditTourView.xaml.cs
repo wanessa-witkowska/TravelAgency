@@ -8,6 +8,7 @@ namespace TravelAgency.Views
         public EditTourView()
         {
             InitializeComponent();
+
         }
     }
 }

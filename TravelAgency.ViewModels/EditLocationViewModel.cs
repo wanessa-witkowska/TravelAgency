@@ -8,7 +8,7 @@ using TravelAgency.Models;
 
 namespace TravelAgency.ViewModels
 {
-    public class EditLocationViewModel : ViewModelBase
+    public class EditLocationViewModel : ObservableObject
     {
         private readonly travelAgencyContext _context;
         private readonly IDialogService _dialogService;
@@ -19,9 +19,12 @@ namespace TravelAgency.ViewModels
             get => _locationId;
             set
             {
-                _locationId = value;
-                OnPropertyChanged(nameof(LocationId));
-                LoadLocation();
+                if (_locationId != value)
+                {
+                    _locationId = value;
+                    OnPropertyChanged(nameof(LocationId));
+                    LoadLocation();  // Załaduj lokalizację po zmianie ID
+                }
             }
         }
 
@@ -31,25 +34,93 @@ namespace TravelAgency.ViewModels
             get => _location;
             set
             {
-                _location = value;
-                OnPropertyChanged(nameof(Location));
-                if (_location != null)
+                if (_location != value)
                 {
-                    Name = _location.Name;
-                    Description = _location.Description;
-                    Address = _location.Address;
-                    PlaceType = _location.PlaceType;
+                    _location = value;
+                    OnPropertyChanged(nameof(Location));
+                    if (_location != null)
+                    {
+                        // Ustaw dane w polach po załadowaniu lokalizacji
+                        Name = _location.Name;
+                        Description = _location.Description;
+                        Address = _location.Address;
+                        PlaceType = _location.PlaceType;
+                    }
                 }
             }
         }
 
-        public string Name { get; set; } = string.Empty;
-        public string Description { get; set; } = string.Empty;
-        public string Address { get; set; } = string.Empty;
-        public string PlaceType { get; set; } = string.Empty;
+        private string _name = string.Empty;
+        public string Name
+        {
+            get => _name;
+            set
+            {
+                if (_name != value)
+                {
+                    _name = value;
+                    OnPropertyChanged(nameof(Name));
+                }
+            }
+        }
 
-        public string Response { get; set; } = string.Empty;
+        private string _description = string.Empty;
+        public string Description
+        {
+            get => _description;
+            set
+            {
+                if (_description != value)
+                {
+                    _description = value;
+                    OnPropertyChanged(nameof(Description));
+                }
+            }
+        }
 
+        private string _address = string.Empty;
+        public string Address
+        {
+            get => _address;
+            set
+            {
+                if (_address != value)
+                {
+                    _address = value;
+                    OnPropertyChanged(nameof(Address));
+                }
+            }
+        }
+
+        private string _placeType = string.Empty;
+        public string PlaceType
+        {
+            get => _placeType;
+            set
+            {
+                if (_placeType != value)
+                {
+                    _placeType = value;
+                    OnPropertyChanged(nameof(PlaceType));
+                }
+            }
+        }
+
+        private string _response = string.Empty;
+        public string Response
+        {
+            get => _response;
+            set
+            {
+                if (_response != value)
+                {
+                    _response = value;
+                    OnPropertyChanged(nameof(Response));
+                }
+            }
+        }
+
+        // Polecenia
         public ICommand Back => _back ??= new RelayCommand<object>(NavigateBack);
         private ICommand? _back;
 
@@ -119,7 +190,12 @@ namespace TravelAgency.ViewModels
 
         private void LoadLocation()
         {
+            // Załaduj lokalizację po ID
             Location = _context.Locations.FirstOrDefault(l => l.Id == LocationId);
+            if (Location == null)
+            {
+                Response = "Location not found"; // Informacja o błędzie, jeśli lokalizacja nie została znaleziona
+            }
         }
     }
 }

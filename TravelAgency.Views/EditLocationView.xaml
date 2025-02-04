@@ -24,8 +24,12 @@
         </Grid.ColumnDefinitions>
 
         <!-- Back and Save Buttons -->
-        <Button Content="Back" Grid.Row="0" Grid.Column="0" Command="{Binding Back}" Margin="5,5,5,0" Width="100" HorizontalAlignment="Left" Style="{StaticResource PrimaryButton}" Tag="&#xE72B;" />
-        <Button Content="Save" Grid.Row="0" Grid.Column="1" Command="{Binding Save}" Margin="5,5,5,0" Width="100" HorizontalAlignment="Right" Style="{StaticResource PrimaryButton}" Tag="&#xE74E;" />
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="5">
+            <Button Content="Back" Command="{Binding Back}" Width="100" 
+                    Style="{StaticResource PrimaryButton}" Tag="&#xE72B;" Margin="5" />
+            <Button Content="Save" Command="{Binding Save}" Width="100" 
+                    Style="{StaticResource PrimaryButton}" Tag="&#xE74E;" Margin="5" />
+        </StackPanel>
 
         <!-- Location Details Section -->
         <GroupBox Header="Location Details" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" Padding="10">
@@ -33,30 +37,35 @@
                 <!-- Name -->
                 <WrapPanel Margin="0,0,0,5">
                     <TextBlock Text="Name" Style="{StaticResource PrimaryTextBlock}" />
-                    <TextBox Text="{Binding Location.Name, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" />
+                    <TextBox Text="{Binding Location.Name, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+                             Style="{StaticResource PrimaryTextBox}" Width="200"/>
                 </WrapPanel>
 
                 <!-- Description -->
                 <WrapPanel Margin="0,0,0,5">
                     <TextBlock Text="Description" Style="{StaticResource PrimaryTextBlock}" />
-                    <TextBox Text="{Binding Location.Description, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" />
+                    <TextBox Text="{Binding Location.Description, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+                             Style="{StaticResource PrimaryTextBox}" Width="200"/>
                 </WrapPanel>
 
                 <!-- Address -->
                 <WrapPanel Margin="0,0,0,5">
                     <TextBlock Text="Address" Style="{StaticResource PrimaryTextBlock}" />
-                    <TextBox Text="{Binding Location.Address, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" />
+                    <TextBox Text="{Binding Location.Address, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+                             Style="{StaticResource PrimaryTextBox}" Width="200"/>
                 </WrapPanel>
 
                 <!-- Place Type -->
                 <WrapPanel Margin="0,0,0,5">
                     <TextBlock Text="Place Type" Style="{StaticResource PrimaryTextBlock}" />
-                    <TextBox Text="{Binding Location.PlaceType, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" />
+                    <TextBox Text="{Binding Location.PlaceType, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+                             Style="{StaticResource PrimaryTextBox}" Width="200"/>
                 </WrapPanel>
             </StackPanel>
         </GroupBox>
 
         <!-- Response Section -->
-        <TextBlock Text="{Binding Response}" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="0,0,0,5"/>
+        <TextBlock Text="{Binding Response}" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" 
+                   Margin="0,0,0,5" Style="{StaticResource PrimaryTextBlock}" Foreground="Red"/>
     </Grid>
 </UserControl>
