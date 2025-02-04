@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Windows.Input;
 using TravelAgency.Data;
@@ -44,12 +44,60 @@ namespace TravelAgency.ViewModels
             }
         }
 
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Email { get; set; }
-        public string PhoneNumber { get; set; }
+        private string _firstName = string.Empty;
+        public string FirstName
+        {
+            get => _firstName;
+            set
+            {
+                _firstName = value;
+                OnPropertyChanged(nameof(FirstName));
+            }
+        }
 
-        public string Response { get; set; }
+        private string _lastName = string.Empty;
+        public string LastName
+        {
+            get => _lastName;
+            set
+            {
+                _lastName = value;
+                OnPropertyChanged(nameof(LastName));
+            }
+        }
+
+        private string _email = string.Empty;
+        public string Email
+        {
+            get => _email;
+            set
+            {
+                _email = value;
+                OnPropertyChanged(nameof(Email));
+            }
+        }
+
+        private string _phoneNumber = string.Empty;
+        public string PhoneNumber
+        {
+            get => _phoneNumber;
+            set
+            {
+                _phoneNumber = value;
+                OnPropertyChanged(nameof(PhoneNumber));
+            }
+        }
+
+        private string _response = string.Empty;
+        public string Response
+        {
+            get => _response;
+            set
+            {
+                _response = value;
+                OnPropertyChanged(nameof(Response));
+            }
+        }
 
         public ICommand Back => _back ??= new RelayCommand<object>(NavigateBack);
         private ICommand? _back;
@@ -68,36 +116,36 @@ namespace TravelAgency.ViewModels
 
         private void SaveChanges(object? obj)
         {
-            if (Customer == null)
-            {
-                Response = "No customer selected";
-                return;
-            }
-
             if (!IsValid())
             {
                 Response = "Please complete all required fields";
                 return;
             }
 
-            var existingCustomer = _context.Customers.FirstOrDefault(c => c.Id == Customer.Id);
-            if (existingCustomer != null)
+            if (Customer == null)
             {
-                existingCustomer.FirstName = FirstName;
-                existingCustomer.LastName = LastName;
-                existingCustomer.Email = Email;
-                existingCustomer.PhoneNumber = PhoneNumber;
+                Customer = new Customer();
+                _context.Customers.Add(Customer);
             }
             else
             {
-                var newCustomer = new Customer
+                var existingCustomer = _context.Customers.Find(Customer.Id);
+                if (existingCustomer != null)
                 {
-                    FirstName = FirstName,
-                    LastName = LastName,
-                    Email = Email,
-                    PhoneNumber = PhoneNumber
-                };
-                _context.Customers.Add(newCustomer);
+                    existingCustomer.FirstName = FirstName;
+                    existingCustomer.LastName = LastName;
+                    existingCustomer.Email = Email;
+                    existingCustomer.PhoneNumber = PhoneNumber;
+                    _context.Entry(existingCustomer).State = EntityState.Modified;
+                }
+                else
+                {
+                    Customer.FirstName = FirstName;
+                    Customer.LastName = LastName;
+                    Customer.Email = Email;
+                    Customer.PhoneNumber = PhoneNumber;
+                    _context.Customers.Add(Customer);
+                }
             }
 
             _context.SaveChanges();
@@ -120,7 +168,14 @@ namespace TravelAgency.ViewModels
 
         private void LoadCustomer()
         {
-            Customer = _context.Customers.FirstOrDefault(c => c.Id == CustomerId);
+            Customer = _context.Customers.AsNoTracking().FirstOrDefault(c => c.Id == CustomerId);
+            if (Customer != null)
+            {
+                FirstName = Customer.FirstName;
+                LastName = Customer.LastName;
+                Email = Customer.Email;
+                PhoneNumber = Customer.PhoneNumber;
+            }
         }
     }
 }

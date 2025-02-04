@@ -46,13 +46,13 @@ namespace TravelAgency.ViewModels
             }
         }
 
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
-        public decimal Price { get; set; }
-        public string Destination { get; set; }
-        public int GuideId { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+        public DateTime StartDate { get; set; } = DateTime.Today;
+        public DateTime EndDate { get; set; } = DateTime.Today;
+        public decimal Price { get; set; } = 0; 
+        public string Destination { get; set; } = string.Empty;
+        public int GuideId { get; set; } = 0;
 
         public string Response { get; set; }
 
@@ -122,8 +122,8 @@ namespace TravelAgency.ViewModels
         {
             return !string.IsNullOrEmpty(Name) &&
                    !string.IsNullOrEmpty(Description) &&
-                   StartDate != null &&
-                   EndDate != null &&
+                   StartDate != DateTime.MinValue &&
+                   EndDate != DateTime.MinValue &&
                    Price > 0 &&
                    !string.IsNullOrEmpty(Destination) &&
                    GuideId > 0;

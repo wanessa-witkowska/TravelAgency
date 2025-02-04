@@ -7,20 +7,152 @@
       "RelativeMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|solutionrelative:travelagency.viewmodels\\editcustomerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.views\\editcustomerview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|solutionrelative:travelagency.views\\editcustomerview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.viewmodels\\addcustomerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|solutionrelative:travelagency.viewmodels\\addcustomerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.viewmodels\\editbookingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|solutionrelative:travelagency.viewmodels\\editbookingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{800D560D-587B-4206-B51C-A31ABD550E5E}|TravelAgency.Models\\TravelAgency.Models.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{800D560D-587B-4206-B51C-A31ABD550E5E}|TravelAgency.Models\\TravelAgency.Models.csproj|solutionrelative:travelagency.models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.viewmodels\\customersviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|solutionrelative:travelagency.viewmodels\\customersviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.viewmodels\\searchviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|solutionrelative:travelagency.viewmodels\\searchviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.views\\datatemplates.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|solutionrelative:travelagency.views\\datatemplates.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.views\\editbookingview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|solutionrelative:travelagency.views\\editbookingview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.views\\toursview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|solutionrelative:travelagency.views\\toursview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.views\\bookingsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|solutionrelative:travelagency.views\\bookingsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.viewmodels\\toursviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|solutionrelative:travelagency.viewmodels\\toursviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.viewmodels\\edittourviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|solutionrelative:travelagency.viewmodels\\edittourviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{800D560D-587B-4206-B51C-A31ABD550E5E}|TravelAgency.Models\\TravelAgency.Models.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.models\\tour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{800D560D-587B-4206-B51C-A31ABD550E5E}|TravelAgency.Models\\TravelAgency.Models.csproj|solutionrelative:travelagency.models\\tour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{800D560D-587B-4206-B51C-A31ABD550E5E}|TravelAgency.Models\\TravelAgency.Models.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{800D560D-587B-4206-B51C-A31ABD550E5E}|TravelAgency.Models\\TravelAgency.Models.csproj|solutionrelative:travelagency.models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E127372-3AA3-42E6-9F1E-B058F86267B2}|TravelAgency.Data\\TravelAgency.Data.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.data\\travelagencycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E127372-3AA3-42E6-9F1E-B058F86267B2}|TravelAgency.Data\\TravelAgency.Data.csproj|solutionrelative:travelagency.data\\travelagencycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.viewmodels\\editlocationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|solutionrelative:travelagency.viewmodels\\editlocationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.viewmodels\\editguideviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|solutionrelative:travelagency.viewmodels\\editguideviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.viewmodels\\addbookingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|solutionrelative:travelagency.viewmodels\\addbookingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.views\\editcustomerview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|solutionrelative:travelagency.views\\editcustomerview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.views\\addlocationview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|solutionrelative:travelagency.views\\addlocationview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.viewmodels\\bookingsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|solutionrelative:travelagency.viewmodels\\bookingsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D209219E-7866-485F-9DCA-686A3BDAE199}|TravelAgency.Main\\TravelAgency.Main.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.main\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D209219E-7866-485F-9DCA-686A3BDAE199}|TravelAgency.Main\\TravelAgency.Main.csproj|solutionrelative:travelagency.main\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D209219E-7866-485F-9DCA-686A3BDAE199}|TravelAgency.Main\\TravelAgency.Main.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.main\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D209219E-7866-485F-9DCA-686A3BDAE199}|TravelAgency.Main\\TravelAgency.Main.csproj|solutionrelative:travelagency.main\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.views\\editguideview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|solutionrelative:travelagency.views\\editguideview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.views\\sharedresources.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|solutionrelative:travelagency.views\\sharedresources.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{869054B1-3D37-4B22-B504-510AE0737025}|TravelAgency.Services\\TravelAgency.Services.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.services\\dialogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{869054B1-3D37-4B22-B504-510AE0737025}|TravelAgency.Services\\TravelAgency.Services.csproj|solutionrelative:travelagency.services\\dialogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{869054B1-3D37-4B22-B504-510AE0737025}|TravelAgency.Services\\TravelAgency.Services.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{869054B1-3D37-4B22-B504-510AE0737025}|TravelAgency.Services\\TravelAgency.Services.csproj|solutionrelative:travelagency.services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{800D560D-587B-4206-B51C-A31ABD550E5E}|TravelAgency.Models\\TravelAgency.Models.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.models\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{800D560D-587B-4206-B51C-A31ABD550E5E}|TravelAgency.Models\\TravelAgency.Models.csproj|solutionrelative:travelagency.models\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{800D560D-587B-4206-B51C-A31ABD550E5E}|TravelAgency.Models\\TravelAgency.Models.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.models\\guide.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{800D560D-587B-4206-B51C-A31ABD550E5E}|TravelAgency.Models\\TravelAgency.Models.csproj|solutionrelative:travelagency.models\\guide.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F34DE5E-EF81-4ECF-90ED-22CEC40E85C7}|TravelAgency.Interfaces\\TravelAgency.Interfaces.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.interfaces\\ibookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F34DE5E-EF81-4ECF-90ED-22CEC40E85C7}|TravelAgency.Interfaces\\TravelAgency.Interfaces.csproj|solutionrelative:travelagency.interfaces\\ibookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6419838B-6C4F-42A4-8F08-FAD6F883A869}|TravelAgency.Extensions\\TravelAgency.Extensions.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.extensions\\stringextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6419838B-6C4F-42A4-8F08-FAD6F883A869}|TravelAgency.Extensions\\TravelAgency.Extensions.csproj|solutionrelative:travelagency.extensions\\stringextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F704B147-F945-4792-BB68-19F391C37B4A}|TravelAgency.Common\\TravelAgency.Common.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.common\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F704B147-F945-4792-BB68-19F391C37B4A}|TravelAgency.Common\\TravelAgency.Common.csproj|solutionrelative:travelagency.common\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F34DE5E-EF81-4ECF-90ED-22CEC40E85C7}|TravelAgency.Interfaces\\TravelAgency.Interfaces.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.interfaces\\idialogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F34DE5E-EF81-4ECF-90ED-22CEC40E85C7}|TravelAgency.Interfaces\\TravelAgency.Interfaces.csproj|solutionrelative:travelagency.interfaces\\idialogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.views\\edittourview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|solutionrelative:travelagency.views\\edittourview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.views\\editlocationview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|solutionrelative:travelagency.views\\editlocationview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.views\\editguideview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|solutionrelative:travelagency.views\\editguideview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.views\\editcustomerview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|solutionrelative:travelagency.views\\editcustomerview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.views\\editbookingview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|solutionrelative:travelagency.views\\editbookingview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.viewmodels\\searchviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|solutionrelative:travelagency.viewmodels\\searchviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.views\\customersview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -31,60 +163,12 @@
       "RelativeMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|solutionrelative:travelagency.views\\customersview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.views\\editbookingview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|solutionrelative:travelagency.views\\editbookingview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.viewmodels\\editbookingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|solutionrelative:travelagency.viewmodels\\editbookingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.views\\editbookingview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|solutionrelative:travelagency.views\\editbookingview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.viewmodels\\edittourviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|solutionrelative:travelagency.viewmodels\\edittourviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.views\\edittourview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|solutionrelative:travelagency.views\\edittourview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{800D560D-587B-4206-B51C-A31ABD550E5E}|TravelAgency.Models\\TravelAgency.Models.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.models\\tour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{800D560D-587B-4206-B51C-A31ABD550E5E}|TravelAgency.Models\\TravelAgency.Models.csproj|solutionrelative:travelagency.models\\tour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.viewmodels\\editlocationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|solutionrelative:travelagency.viewmodels\\editlocationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{800D560D-587B-4206-B51C-A31ABD550E5E}|TravelAgency.Models\\TravelAgency.Models.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.models\\guide.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{800D560D-587B-4206-B51C-A31ABD550E5E}|TravelAgency.Models\\TravelAgency.Models.csproj|solutionrelative:travelagency.models\\guide.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{800D560D-587B-4206-B51C-A31ABD550E5E}|TravelAgency.Models\\TravelAgency.Models.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.models\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{800D560D-587B-4206-B51C-A31ABD550E5E}|TravelAgency.Models\\TravelAgency.Models.csproj|solutionrelative:travelagency.models\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.viewmodels\\editguideviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|solutionrelative:travelagency.viewmodels\\editguideviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{800D560D-587B-4206-B51C-A31ABD550E5E}|TravelAgency.Models\\TravelAgency.Models.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{800D560D-587B-4206-B51C-A31ABD550E5E}|TravelAgency.Models\\TravelAgency.Models.csproj|solutionrelative:travelagency.models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.views\\addbookingview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|solutionrelative:travelagency.views\\addbookingview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{800D560D-587B-4206-B51C-A31ABD550E5E}|TravelAgency.Models\\TravelAgency.Models.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{800D560D-587B-4206-B51C-A31ABD550E5E}|TravelAgency.Models\\TravelAgency.Models.csproj|solutionrelative:travelagency.models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.viewmodels\\bookingsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|solutionrelative:travelagency.viewmodels\\bookingsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.viewmodels\\addlocationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -103,16 +187,8 @@
       "RelativeMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|solutionrelative:travelagency.views\\addtourview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.views\\datatemplates.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|solutionrelative:travelagency.views\\datatemplates.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|solutionrelative:travelagency.viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D209219E-7866-485F-9DCA-686A3BDAE199}|TravelAgency.Main\\TravelAgency.Main.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.main\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D209219E-7866-485F-9DCA-686A3BDAE199}|TravelAgency.Main\\TravelAgency.Main.csproj|solutionrelative:travelagency.main\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.viewmodels\\guidesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -123,24 +199,8 @@
       "RelativeMoniker": "D:0:0:{40ACA9C8-21D5-44BD-88FC-9B72E031CEB8}|TravelAgency.Controls\\TravelAgency.Controls.csproj|solutionrelative:travelagency.controls\\primarydatepicker.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2F34DE5E-EF81-4ECF-90ED-22CEC40E85C7}|TravelAgency.Interfaces\\TravelAgency.Interfaces.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.interfaces\\idialogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F34DE5E-EF81-4ECF-90ED-22CEC40E85C7}|TravelAgency.Interfaces\\TravelAgency.Interfaces.csproj|solutionrelative:travelagency.interfaces\\idialogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E127372-3AA3-42E6-9F1E-B058F86267B2}|TravelAgency.Data\\TravelAgency.Data.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.data\\travelagencycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E127372-3AA3-42E6-9F1E-B058F86267B2}|TravelAgency.Data\\TravelAgency.Data.csproj|solutionrelative:travelagency.data\\travelagencycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.viewmodels\\toursviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|solutionrelative:travelagency.viewmodels\\toursviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.views\\locationsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|solutionrelative:travelagency.views\\locationsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.viewmodels\\addcustomerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|solutionrelative:travelagency.viewmodels\\addcustomerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.views\\addlocationview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -159,28 +219,12 @@
       "RelativeMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|solutionrelative:travelagency.views\\guidesview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.views\\bookingsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|solutionrelative:travelagency.views\\bookingsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.views\\addcustomerview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|solutionrelative:travelagency.views\\addcustomerview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|solutionrelative:travelagency.viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2F34DE5E-EF81-4ECF-90ED-22CEC40E85C7}|TravelAgency.Interfaces\\TravelAgency.Interfaces.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.interfaces\\ibookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F34DE5E-EF81-4ECF-90ED-22CEC40E85C7}|TravelAgency.Interfaces\\TravelAgency.Interfaces.csproj|solutionrelative:travelagency.interfaces\\ibookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D209219E-7866-485F-9DCA-686A3BDAE199}|TravelAgency.Main\\TravelAgency.Main.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.main\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D209219E-7866-485F-9DCA-686A3BDAE199}|TravelAgency.Main\\TravelAgency.Main.csproj|solutionrelative:travelagency.main\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.views\\toursview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|solutionrelative:travelagency.views\\toursview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.viewmodels\\travelagency.viewmodels.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -194,31 +238,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SearchViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\SearchViewModel.cs",
-              "RelativeDocumentMoniker": "TravelAgency.ViewModels\\SearchViewModel.cs",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\SearchViewModel.cs",
-              "RelativeToolTip": "TravelAgency.ViewModels\\SearchViewModel.cs",
-              "ViewState": "AQIAAFIBAAAAAAAAAADgv2QBAABGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T22:11:12.689Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CustomersViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\CustomersViewModel.cs",
-              "RelativeDocumentMoniker": "TravelAgency.ViewModels\\CustomersViewModel.cs",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\CustomersViewModel.cs",
-              "RelativeToolTip": "TravelAgency.ViewModels\\CustomersViewModel.cs",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAvwFQAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T21:34:02.366Z"
+              "Title": "EditCustomerView.xaml",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\EditCustomerView.xaml",
+              "RelativeDocumentMoniker": "TravelAgency.Views\\EditCustomerView.xaml",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\EditCustomerView.xaml",
+              "RelativeToolTip": "TravelAgency.Views\\EditCustomerView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-04T18:25:10.873Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -226,70 +258,111 @@
               "Title": "EditCustomerViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\EditCustomerViewModel.cs",
               "RelativeDocumentMoniker": "TravelAgency.ViewModels\\EditCustomerViewModel.cs",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\EditCustomerViewModel.cs",
-              "RelativeToolTip": "TravelAgency.ViewModels\\EditCustomerViewModel.cs",
-              "ViewState": "AQIAAF8AAAAAAAAAAAAUwG8AAAA2AAAA",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\EditCustomerViewModel.cs*",
+              "RelativeToolTip": "TravelAgency.ViewModels\\EditCustomerViewModel.cs*",
+              "ViewState": "AQIAAJoAAAAAAAAAAAA9wKcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-02T08:36:19.036Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AddBookingViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\AddBookingViewModel.cs",
-              "RelativeDocumentMoniker": "TravelAgency.ViewModels\\AddBookingViewModel.cs",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\AddBookingViewModel.cs",
-              "RelativeToolTip": "TravelAgency.ViewModels\\AddBookingViewModel.cs",
-              "ViewState": "AQIAAMQAAAAAAAAAAAAvwNYAAAAQAAAA",
+              "DocumentIndex": 5,
+              "Title": "CustomersViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\CustomersViewModel.cs",
+              "RelativeDocumentMoniker": "TravelAgency.ViewModels\\CustomersViewModel.cs",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\CustomersViewModel.cs",
+              "RelativeToolTip": "TravelAgency.ViewModels\\CustomersViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFQAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T21:20:30.027Z"
+              "WhenOpened": "2025-02-01T21:34:02.366Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddCustomerViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\AddCustomerViewModel.cs",
+              "RelativeDocumentMoniker": "TravelAgency.ViewModels\\AddCustomerViewModel.cs",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\AddCustomerViewModel.cs",
+              "RelativeToolTip": "TravelAgency.ViewModels\\AddCustomerViewModel.cs",
+              "ViewState": "AQIAAJ8AAAAAAAAAAAAmwL4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-01T21:38:41.177Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "EditCustomerView.xaml",
-              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\EditCustomerView.xaml",
-              "RelativeDocumentMoniker": "TravelAgency.Views\\EditCustomerView.xaml",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\EditCustomerView.xaml",
-              "RelativeToolTip": "TravelAgency.Views\\EditCustomerView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-02T08:43:00.869Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CustomersView.xaml",
-              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\CustomersView.xaml",
-              "RelativeDocumentMoniker": "TravelAgency.Views\\CustomersView.xaml",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\CustomersView.xaml",
-              "RelativeToolTip": "TravelAgency.Views\\CustomersView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-01T21:26:52.173Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CustomersView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\CustomersView.xaml.cs",
-              "RelativeDocumentMoniker": "TravelAgency.Views\\CustomersView.xaml.cs",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\CustomersView.xaml.cs",
-              "RelativeToolTip": "TravelAgency.Views\\CustomersView.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Models\\Customer.cs",
+              "RelativeDocumentMoniker": "TravelAgency.Models\\Customer.cs",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Models\\Customer.cs",
+              "RelativeToolTip": "TravelAgency.Models\\Customer.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAwwB0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T22:09:03.069Z"
+              "WhenOpened": "2025-02-01T21:57:27.145Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "EditBookingViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\EditBookingViewModel.cs",
               "RelativeDocumentMoniker": "TravelAgency.ViewModels\\EditBookingViewModel.cs",
               "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\EditBookingViewModel.cs",
               "RelativeToolTip": "TravelAgency.ViewModels\\EditBookingViewModel.cs",
-              "ViewState": "AQIAAGMAAAAAAAAAAAAuwAAAAAAAAAAA",
+              "ViewState": "AQIAAIcAAAAAAAAAAAAmwKYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T21:21:22.404Z"
+              "WhenOpened": "2025-02-01T21:21:22.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EditTourViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\EditTourViewModel.cs",
+              "RelativeDocumentMoniker": "TravelAgency.ViewModels\\EditTourViewModel.cs",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\EditTourViewModel.cs",
+              "RelativeToolTip": "TravelAgency.ViewModels\\EditTourViewModel.cs",
+              "ViewState": "AQIAAHsAAAAAAAAAAAAqwIIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T08:35:50.379Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Booking.cs",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Models\\Booking.cs",
+              "RelativeDocumentMoniker": "TravelAgency.Models\\Booking.cs",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Models\\Booking.cs",
+              "RelativeToolTip": "TravelAgency.Models\\Booking.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAawCIAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-01T21:19:11.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Tour.cs",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Models\\Tour.cs",
+              "RelativeDocumentMoniker": "TravelAgency.Models\\Tour.cs",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Models\\Tour.cs",
+              "RelativeToolTip": "TravelAgency.Models\\Tour.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAhwDAAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-01T20:59:22.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DataTemplates.xaml",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\DataTemplates.xaml",
+              "RelativeDocumentMoniker": "TravelAgency.Views\\DataTemplates.xaml",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\DataTemplates.xaml",
+              "RelativeToolTip": "TravelAgency.Views\\DataTemplates.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-02T10:25:31.647Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -304,86 +377,61 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "EditTourViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\EditTourViewModel.cs",
-              "RelativeDocumentMoniker": "TravelAgency.ViewModels\\EditTourViewModel.cs",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\EditTourViewModel.cs",
-              "RelativeToolTip": "TravelAgency.ViewModels\\EditTourViewModel.cs",
-              "ViewState": "AQIAAG0AAAAAAAAAAAAUwHwAAAAnAAAA",
+              "DocumentIndex": 14,
+              "Title": "TravelAgencyContext.cs",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Data\\TravelAgencyContext.cs",
+              "RelativeDocumentMoniker": "TravelAgency.Data\\TravelAgencyContext.cs",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Data\\TravelAgencyContext.cs",
+              "RelativeToolTip": "TravelAgency.Data\\TravelAgencyContext.cs",
+              "ViewState": "AQIAAHMAAAAAAAAAAAAEwHsAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T08:35:50.379Z"
+              "WhenOpened": "2025-02-01T21:17:03.205Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ToursViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\ToursViewModel.cs",
+              "RelativeDocumentMoniker": "TravelAgency.ViewModels\\ToursViewModel.cs",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\ToursViewModel.cs",
+              "RelativeToolTip": "TravelAgency.ViewModels\\ToursViewModel.cs",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAwwDQAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-01T21:37:03.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ToursView.xaml",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\ToursView.xaml",
+              "RelativeDocumentMoniker": "TravelAgency.Views\\ToursView.xaml",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\ToursView.xaml",
+              "RelativeToolTip": "TravelAgency.Views\\ToursView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-01T20:59:01.065Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "EditBookingView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\EditBookingView.xaml.cs",
-              "RelativeDocumentMoniker": "TravelAgency.Views\\EditBookingView.xaml.cs",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\EditBookingView.xaml.cs",
-              "RelativeToolTip": "TravelAgency.Views\\EditBookingView.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T21:57:54.12Z"
+              "Title": "BookingsView.xaml",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\BookingsView.xaml",
+              "RelativeDocumentMoniker": "TravelAgency.Views\\BookingsView.xaml",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\BookingsView.xaml",
+              "RelativeToolTip": "TravelAgency.Views\\BookingsView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-01T21:13:36.85Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "EditLocationViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\EditLocationViewModel.cs",
               "RelativeDocumentMoniker": "TravelAgency.ViewModels\\EditLocationViewModel.cs",
               "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\EditLocationViewModel.cs",
               "RelativeToolTip": "TravelAgency.ViewModels\\EditLocationViewModel.cs",
-              "ViewState": "AQIAAGkAAAAAAAAAAAA2wH0AAAAAAAAA",
+              "ViewState": "AQIAACUAAAAAAAAAAAAAwDgAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-02T10:09:40.438Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "EditTourView.xaml",
-              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\EditTourView.xaml",
-              "RelativeDocumentMoniker": "TravelAgency.Views\\EditTourView.xaml",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\EditTourView.xaml",
-              "RelativeToolTip": "TravelAgency.Views\\EditTourView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-02T10:14:25.564Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Location.cs",
-              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Models\\Location.cs",
-              "RelativeDocumentMoniker": "TravelAgency.Models\\Location.cs",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Models\\Location.cs",
-              "RelativeToolTip": "TravelAgency.Models\\Location.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T21:44:49.772Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Guide.cs",
-              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Models\\Guide.cs",
-              "RelativeDocumentMoniker": "TravelAgency.Models\\Guide.cs",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Models\\Guide.cs",
-              "RelativeToolTip": "TravelAgency.Models\\Guide.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T21:43:24.767Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Tour.cs",
-              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Models\\Tour.cs",
-              "RelativeDocumentMoniker": "TravelAgency.Models\\Tour.cs",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Models\\Tour.cs",
-              "RelativeToolTip": "TravelAgency.Models\\Tour.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAxwD0AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T20:59:22.192Z"
             },
             {
               "$type": "Document",
@@ -393,82 +441,48 @@
               "RelativeDocumentMoniker": "TravelAgency.ViewModels\\EditGuideViewModel.cs",
               "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\EditGuideViewModel.cs",
               "RelativeToolTip": "TravelAgency.ViewModels\\EditGuideViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAdAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAYwDUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-02T09:59:49.313Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "AddBookingView.xaml",
-              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\AddBookingView.xaml",
-              "RelativeDocumentMoniker": "TravelAgency.Views\\AddBookingView.xaml",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\AddBookingView.xaml",
-              "RelativeToolTip": "TravelAgency.Views\\AddBookingView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-01T21:13:33.109Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Models\\Customer.cs",
-              "RelativeDocumentMoniker": "TravelAgency.Models\\Customer.cs",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Models\\Customer.cs",
-              "RelativeToolTip": "TravelAgency.Models\\Customer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
+              "Title": "AddBookingViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\AddBookingViewModel.cs",
+              "RelativeDocumentMoniker": "TravelAgency.ViewModels\\AddBookingViewModel.cs",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\AddBookingViewModel.cs",
+              "RelativeToolTip": "TravelAgency.ViewModels\\AddBookingViewModel.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAYwNYAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T21:57:27.145Z"
+              "WhenOpened": "2025-02-01T21:20:30.027Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "AddTourView.xaml",
-              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\AddTourView.xaml",
-              "RelativeDocumentMoniker": "TravelAgency.Views\\AddTourView.xaml",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\AddTourView.xaml",
-              "RelativeToolTip": "TravelAgency.Views\\AddTourView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-02T08:26:58.506Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "GuidesViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\GuidesViewModel.cs",
-              "RelativeDocumentMoniker": "TravelAgency.ViewModels\\GuidesViewModel.cs",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\GuidesViewModel.cs",
-              "RelativeToolTip": "TravelAgency.ViewModels\\GuidesViewModel.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAgwDYAAAAJAAAA",
+              "DocumentIndex": 18,
+              "Title": "AddLocationView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\AddLocationView.xaml.cs",
+              "RelativeDocumentMoniker": "TravelAgency.Views\\AddLocationView.xaml.cs",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\AddLocationView.xaml.cs",
+              "RelativeToolTip": "TravelAgency.Views\\AddLocationView.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T21:37:00.935Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Booking.cs",
-              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Models\\Booking.cs",
-              "RelativeDocumentMoniker": "TravelAgency.Models\\Booking.cs",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Models\\Booking.cs",
-              "RelativeToolTip": "TravelAgency.Models\\Booking.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABIAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T21:19:11.94Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "PrimaryDatePicker.xaml",
-              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Controls\\PrimaryDatePicker.xaml",
-              "RelativeDocumentMoniker": "TravelAgency.Controls\\PrimaryDatePicker.xaml",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Controls\\PrimaryDatePicker.xaml",
-              "RelativeToolTip": "TravelAgency.Controls\\PrimaryDatePicker.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-02T10:12:43.946Z"
+              "WhenOpened": "2025-02-03T18:12:12.847Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Main\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "TravelAgency.Main\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Main\\MainWindow.xaml",
+              "RelativeToolTip": "TravelAgency.Main\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-01T20:55:29.746Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "BookingsViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\BookingsViewModel.cs",
               "RelativeDocumentMoniker": "TravelAgency.ViewModels\\BookingsViewModel.cs",
@@ -480,66 +494,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "AddGuideViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\AddGuideViewModel.cs",
-              "RelativeDocumentMoniker": "TravelAgency.ViewModels\\AddGuideViewModel.cs",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\AddGuideViewModel.cs",
-              "RelativeToolTip": "TravelAgency.ViewModels\\AddGuideViewModel.cs",
-              "ViewState": "AQIAAFgAAAAAAAAAAAAAAGwAAAAJAAAA",
+              "DocumentIndex": 25,
+              "Title": "CustomerService.cs",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Services\\CustomerService.cs",
+              "RelativeDocumentMoniker": "TravelAgency.Services\\CustomerService.cs",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Services\\CustomerService.cs",
+              "RelativeToolTip": "TravelAgency.Services\\CustomerService.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAkwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T07:56:11.989Z"
+              "WhenOpened": "2025-02-03T17:59:55.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "StringExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Extensions\\StringExtensions.cs",
+              "RelativeDocumentMoniker": "TravelAgency.Extensions\\StringExtensions.cs",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Extensions\\StringExtensions.cs",
+              "RelativeToolTip": "TravelAgency.Extensions\\StringExtensions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T17:58:49.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ViewModelBase.cs",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Common\\ViewModelBase.cs",
+              "RelativeDocumentMoniker": "TravelAgency.Common\\ViewModelBase.cs",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Common\\ViewModelBase.cs",
+              "RelativeToolTip": "TravelAgency.Common\\ViewModelBase.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T17:58:04.696Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "SharedResources.xaml",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\SharedResources.xaml",
+              "RelativeDocumentMoniker": "TravelAgency.Views\\SharedResources.xaml",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\SharedResources.xaml",
+              "RelativeToolTip": "TravelAgency.Views\\SharedResources.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-03T18:06:14.865Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
-              "Title": "AddLocationViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\AddLocationViewModel.cs",
-              "RelativeDocumentMoniker": "TravelAgency.ViewModels\\AddLocationViewModel.cs",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\AddLocationViewModel.cs",
-              "RelativeToolTip": "TravelAgency.ViewModels\\AddLocationViewModel.cs",
-              "ViewState": "AQIAAH0AAAAAAAAAAAAwwJ8AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T08:10:02.146Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "AddTourViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\AddTourViewModel.cs",
-              "RelativeDocumentMoniker": "TravelAgency.ViewModels\\AddTourViewModel.cs",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\AddTourViewModel.cs",
-              "RelativeToolTip": "TravelAgency.ViewModels\\AddTourViewModel.cs",
-              "ViewState": "AQIAAHgAAAAAAAAAAAAiwHkAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T08:10:09.807Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "DataTemplates.xaml",
-              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\DataTemplates.xaml",
-              "RelativeDocumentMoniker": "TravelAgency.Views\\DataTemplates.xaml",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\DataTemplates.xaml",
-              "RelativeToolTip": "TravelAgency.Views\\DataTemplates.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-02T10:25:31.647Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "MainWindowViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\MainWindowViewModel.cs",
-              "RelativeDocumentMoniker": "TravelAgency.ViewModels\\MainWindowViewModel.cs",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\MainWindowViewModel.cs",
-              "RelativeToolTip": "TravelAgency.ViewModels\\MainWindowViewModel.cs",
-              "ViewState": "AQIAAHEAAAAAAAAAAAAuwIwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T21:40:23.815Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Main\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "TravelAgency.Main\\MainWindow.xaml.cs",
@@ -551,43 +554,278 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 22,
+              "Title": "EditGuideView.xaml",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\EditGuideView.xaml",
+              "RelativeDocumentMoniker": "TravelAgency.Views\\EditGuideView.xaml",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\EditGuideView.xaml",
+              "RelativeToolTip": "TravelAgency.Views\\EditGuideView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-03T17:49:03.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "IBookingService.cs",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Interfaces\\IBookingService.cs",
+              "RelativeDocumentMoniker": "TravelAgency.Interfaces\\IBookingService.cs",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Interfaces\\IBookingService.cs",
+              "RelativeToolTip": "TravelAgency.Interfaces\\IBookingService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-01T21:20:52.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "DialogService.cs",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Services\\DialogService.cs",
+              "RelativeDocumentMoniker": "TravelAgency.Services\\DialogService.cs",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Services\\DialogService.cs",
+              "RelativeToolTip": "TravelAgency.Services\\DialogService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T18:00:00.832Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
               "Title": "IDialogService.cs",
               "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Interfaces\\IDialogService.cs",
               "RelativeDocumentMoniker": "TravelAgency.Interfaces\\IDialogService.cs",
               "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Interfaces\\IDialogService.cs",
               "RelativeToolTip": "TravelAgency.Interfaces\\IDialogService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAcwAgAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-02T10:03:32.908Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "ToursViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\ToursViewModel.cs",
-              "RelativeDocumentMoniker": "TravelAgency.ViewModels\\ToursViewModel.cs",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\ToursViewModel.cs",
-              "RelativeToolTip": "TravelAgency.ViewModels\\ToursViewModel.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAgwDQAAAAsAAAA",
+              "DocumentIndex": 27,
+              "Title": "Guide.cs",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Models\\Guide.cs",
+              "RelativeDocumentMoniker": "TravelAgency.Models\\Guide.cs",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Models\\Guide.cs",
+              "RelativeToolTip": "TravelAgency.Models\\Guide.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T21:37:03.619Z"
+              "WhenOpened": "2025-02-02T21:43:24.767Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "TravelAgencyContext.cs",
-              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Data\\TravelAgencyContext.cs",
-              "RelativeDocumentMoniker": "TravelAgency.Data\\TravelAgencyContext.cs",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Data\\TravelAgencyContext.cs",
-              "RelativeToolTip": "TravelAgency.Data\\TravelAgencyContext.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAAHoAAAAfAAAA",
+              "DocumentIndex": 26,
+              "Title": "Location.cs",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Models\\Location.cs",
+              "RelativeDocumentMoniker": "TravelAgency.Models\\Location.cs",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Models\\Location.cs",
+              "RelativeToolTip": "TravelAgency.Models\\Location.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T21:17:03.205Z"
+              "WhenOpened": "2025-02-02T21:44:49.772Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "EditTourView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\EditTourView.xaml.cs",
+              "RelativeDocumentMoniker": "TravelAgency.Views\\EditTourView.xaml.cs",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\EditTourView.xaml.cs",
+              "RelativeToolTip": "TravelAgency.Views\\EditTourView.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T17:52:43.401Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 33,
+              "Title": "EditLocationView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\EditLocationView.xaml.cs",
+              "RelativeDocumentMoniker": "TravelAgency.Views\\EditLocationView.xaml.cs",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\EditLocationView.xaml.cs",
+              "RelativeToolTip": "TravelAgency.Views\\EditLocationView.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T17:52:39.73Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "EditGuideView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\EditGuideView.xaml.cs",
+              "RelativeDocumentMoniker": "TravelAgency.Views\\EditGuideView.xaml.cs",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\EditGuideView.xaml.cs",
+              "RelativeToolTip": "TravelAgency.Views\\EditGuideView.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T17:52:37.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "EditCustomerView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\EditCustomerView.xaml.cs",
+              "RelativeDocumentMoniker": "TravelAgency.Views\\EditCustomerView.xaml.cs",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\EditCustomerView.xaml.cs",
+              "RelativeToolTip": "TravelAgency.Views\\EditCustomerView.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T17:52:29.818Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "CustomersView.xaml",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\CustomersView.xaml",
+              "RelativeDocumentMoniker": "TravelAgency.Views\\CustomersView.xaml",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\CustomersView.xaml",
+              "RelativeToolTip": "TravelAgency.Views\\CustomersView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-01T21:26:52.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "EditBookingView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\EditBookingView.xaml.cs",
+              "RelativeDocumentMoniker": "TravelAgency.Views\\EditBookingView.xaml.cs",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\EditBookingView.xaml.cs",
+              "RelativeToolTip": "TravelAgency.Views\\EditBookingView.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T21:57:54.12Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "SearchViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\SearchViewModel.cs",
+              "RelativeDocumentMoniker": "TravelAgency.ViewModels\\SearchViewModel.cs",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\SearchViewModel.cs",
+              "RelativeToolTip": "TravelAgency.ViewModels\\SearchViewModel.cs",
+              "ViewState": "AQIAAFIBAAAAAAAAAADgv2QBAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T22:11:12.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "CustomersView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\CustomersView.xaml.cs",
+              "RelativeDocumentMoniker": "TravelAgency.Views\\CustomersView.xaml.cs",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\CustomersView.xaml.cs",
+              "RelativeToolTip": "TravelAgency.Views\\CustomersView.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T22:09:03.069Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "EditTourView.xaml",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\EditTourView.xaml",
+              "RelativeDocumentMoniker": "TravelAgency.Views\\EditTourView.xaml",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\EditTourView.xaml",
+              "RelativeToolTip": "TravelAgency.Views\\EditTourView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-02T10:14:25.564Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "AddBookingView.xaml",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\AddBookingView.xaml",
+              "RelativeDocumentMoniker": "TravelAgency.Views\\AddBookingView.xaml",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\AddBookingView.xaml",
+              "RelativeToolTip": "TravelAgency.Views\\AddBookingView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-01T21:13:33.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "AddTourView.xaml",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\AddTourView.xaml",
+              "RelativeDocumentMoniker": "TravelAgency.Views\\AddTourView.xaml",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\AddTourView.xaml",
+              "RelativeToolTip": "TravelAgency.Views\\AddTourView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-02T08:26:58.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "GuidesViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\GuidesViewModel.cs",
+              "RelativeDocumentMoniker": "TravelAgency.ViewModels\\GuidesViewModel.cs",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\GuidesViewModel.cs",
+              "RelativeToolTip": "TravelAgency.ViewModels\\GuidesViewModel.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAgwDYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-01T21:37:00.935Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "PrimaryDatePicker.xaml",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Controls\\PrimaryDatePicker.xaml",
+              "RelativeDocumentMoniker": "TravelAgency.Controls\\PrimaryDatePicker.xaml",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Controls\\PrimaryDatePicker.xaml",
+              "RelativeToolTip": "TravelAgency.Controls\\PrimaryDatePicker.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-02T10:12:43.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "AddGuideViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\AddGuideViewModel.cs",
+              "RelativeDocumentMoniker": "TravelAgency.ViewModels\\AddGuideViewModel.cs",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\AddGuideViewModel.cs",
+              "RelativeToolTip": "TravelAgency.ViewModels\\AddGuideViewModel.cs",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAAAGwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T07:56:11.989Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "AddLocationViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\AddLocationViewModel.cs",
+              "RelativeDocumentMoniker": "TravelAgency.ViewModels\\AddLocationViewModel.cs",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\AddLocationViewModel.cs",
+              "RelativeToolTip": "TravelAgency.ViewModels\\AddLocationViewModel.cs",
+              "ViewState": "AQIAAH0AAAAAAAAAAAAwwJ8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T08:10:02.146Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "AddTourViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\AddTourViewModel.cs",
+              "RelativeDocumentMoniker": "TravelAgency.ViewModels\\AddTourViewModel.cs",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\AddTourViewModel.cs",
+              "RelativeToolTip": "TravelAgency.ViewModels\\AddTourViewModel.cs",
+              "ViewState": "AQIAAHgAAAAAAAAAAAAiwHkAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T08:10:09.807Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "MainWindowViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\MainWindowViewModel.cs",
+              "RelativeDocumentMoniker": "TravelAgency.ViewModels\\MainWindowViewModel.cs",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\MainWindowViewModel.cs",
+              "RelativeToolTip": "TravelAgency.ViewModels\\MainWindowViewModel.cs",
+              "ViewState": "AQIAAHEAAAAAAAAAAAAuwIwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-01T21:40:23.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
               "Title": "LocationsView.xaml",
               "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\LocationsView.xaml",
               "RelativeDocumentMoniker": "TravelAgency.Views\\LocationsView.xaml",
@@ -598,7 +836,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 51,
               "Title": "LocationsViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\LocationsViewModel.cs",
               "RelativeDocumentMoniker": "TravelAgency.ViewModels\\LocationsViewModel.cs",
@@ -610,19 +848,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "AddCustomerViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\AddCustomerViewModel.cs",
-              "RelativeDocumentMoniker": "TravelAgency.ViewModels\\AddCustomerViewModel.cs",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\AddCustomerViewModel.cs",
-              "RelativeToolTip": "TravelAgency.ViewModels\\AddCustomerViewModel.cs",
-              "ViewState": "AQIAAKkAAAAAAAAAAAAswLIAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T21:38:41.177Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 50,
               "Title": "AddLocationView.xaml",
               "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\AddLocationView.xaml",
               "RelativeDocumentMoniker": "TravelAgency.Views\\AddLocationView.xaml",
@@ -633,7 +859,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 53,
               "Title": "GuidesView.xaml",
               "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\GuidesView.xaml",
               "RelativeDocumentMoniker": "TravelAgency.Views\\GuidesView.xaml",
@@ -644,7 +870,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 52,
               "Title": "AddGuideView.xaml",
               "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\AddGuideView.xaml",
               "RelativeDocumentMoniker": "TravelAgency.Views\\AddGuideView.xaml",
@@ -655,7 +881,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 55,
               "Title": "ViewModelBase.cs",
               "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\ViewModelBase.cs",
               "RelativeDocumentMoniker": "TravelAgency.ViewModels\\ViewModelBase.cs",
@@ -667,18 +893,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "BookingsView.xaml",
-              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\BookingsView.xaml",
-              "RelativeDocumentMoniker": "TravelAgency.Views\\BookingsView.xaml",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\BookingsView.xaml",
-              "RelativeToolTip": "TravelAgency.Views\\BookingsView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-01T21:13:36.85Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 54,
               "Title": "AddCustomerView.xaml",
               "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\AddCustomerView.xaml",
               "RelativeDocumentMoniker": "TravelAgency.Views\\AddCustomerView.xaml",
@@ -689,41 +904,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "IBookingService.cs",
-              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Interfaces\\IBookingService.cs",
-              "RelativeDocumentMoniker": "TravelAgency.Interfaces\\IBookingService.cs",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Interfaces\\IBookingService.cs",
-              "RelativeToolTip": "TravelAgency.Interfaces\\IBookingService.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T21:20:52.704Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "ToursView.xaml",
-              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\ToursView.xaml",
-              "RelativeDocumentMoniker": "TravelAgency.Views\\ToursView.xaml",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\ToursView.xaml",
-              "RelativeToolTip": "TravelAgency.Views\\ToursView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-01T20:59:01.065Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Main\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "TravelAgency.Main\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Main\\MainWindow.xaml",
-              "RelativeToolTip": "TravelAgency.Main\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-01T20:55:29.746Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 56,
               "Title": "TravelAgency.ViewModels.csproj",
               "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj",
               "RelativeDocumentMoniker": "TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj",

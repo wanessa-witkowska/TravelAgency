@@ -47,12 +47,12 @@ namespace TravelAgency.ViewModels
             }
         }
 
-        public int CustomerId { get; set; }
-        public int TourId { get; set; }
-        public int NumberOfParticipants { get; set; }
-        public DateTime? BookingDate { get; set; }
-        public DateTime? TourDate { get; set; }
-        public decimal TotalPrice { get; set; }
+        public int CustomerId { get; set; } = 0;
+        public int TourId { get; set; } = 0;
+        public int NumberOfParticipants { get; set; } = 0;
+        public DateTime? BookingDate { get; set; } = DateTime.Today;
+        public DateTime? TourDate { get; set; } = DateTime.Today;
+        public decimal TotalPrice { get; set; } = 0;
 
         private string _status;
         public string Status

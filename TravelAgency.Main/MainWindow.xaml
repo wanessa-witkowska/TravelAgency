@@ -17,6 +17,10 @@
 
     <Grid>
         <TabControl TabStripPlacement="Left" SelectedIndex="{Binding SelectedTab}" ItemContainerStyle="{StaticResource TabPrimaryItem}">
+            <TabItem Header="Search" Tag="&#xE773;">
+                <ContentControl Content="{Binding SearchSubView}" />
+            </TabItem>
+            
             <TabItem Header="Bookings" Tag="&#xE77A;">
                 <ContentControl Content="{Binding BookingsSubView}" Margin="0,0,-2,-2" />
             </TabItem>
@@ -35,10 +39,6 @@
 
             <TabItem Header="Tours" Tag="&#xE82B;">
                 <ContentControl Content="{Binding ToursSubView}" />
-            </TabItem>
-
-            <TabItem Header="Search" Tag="&#xE773;">
-                <ContentControl Content="{Binding SearchSubView}" />
             </TabItem>
         </TabControl>
     </Grid>

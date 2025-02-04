@@ -43,12 +43,12 @@ namespace TravelAgency.ViewModels
             }
         }
 
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public string Address { get; set; }
-        public string PlaceType { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+        public string Address { get; set; } = string.Empty;
+        public string PlaceType { get; set; } = string.Empty;
 
-        public string Response { get; set; }
+        public string Response { get; set; } = string.Empty;
 
         public ICommand Back => _back ??= new RelayCommand<object>(NavigateBack);
         private ICommand? _back;

@@ -64,10 +64,10 @@
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header="Guide" DisplayMemberBinding="{Binding Guide.Name}">
+                    <GridViewColumn Header="Guide" DisplayMemberBinding="{Binding Guide.LastName}">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding Guide.Name}" />
+                                <TextBlock Text="{Binding Guide.LastName}" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

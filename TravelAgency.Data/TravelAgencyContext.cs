@@ -1,9 +1,7 @@
 ﻿using TravelAgency.Models;
 using Microsoft.EntityFrameworkCore;
-using System.IO;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using System.Collections.Generic;
 
 namespace TravelAgency.Data
 {
