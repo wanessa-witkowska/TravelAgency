@@ -37,31 +37,31 @@
                 <!-- Name -->
                 <WrapPanel Margin="0,0,0,5">
                     <TextBlock Text="Name" Style="{StaticResource PrimaryTextBlock}" />
-                    <TextBox Text="{Binding Location.Name, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
-                             Style="{StaticResource PrimaryTextBox}" Width="200"/>
+                    <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+             Style="{StaticResource PrimaryTextBox}" Width="200"/>
                 </WrapPanel>
 
                 <!-- Description -->
                 <WrapPanel Margin="0,0,0,5">
                     <TextBlock Text="Description" Style="{StaticResource PrimaryTextBlock}" />
-                    <TextBox Text="{Binding Location.Description, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
-                             Style="{StaticResource PrimaryTextBox}" Width="200"/>
+                    <TextBox Text="{Binding Description, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+             Style="{StaticResource PrimaryTextBox}" Width="200"/>
                 </WrapPanel>
 
                 <!-- Address -->
                 <WrapPanel Margin="0,0,0,5">
                     <TextBlock Text="Address" Style="{StaticResource PrimaryTextBlock}" />
-                    <TextBox Text="{Binding Location.Address, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
-                             Style="{StaticResource PrimaryTextBox}" Width="200"/>
+                    <TextBox Text="{Binding Address, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+             Style="{StaticResource PrimaryTextBox}" Width="200"/>
                 </WrapPanel>
 
                 <!-- Place Type -->
                 <WrapPanel Margin="0,0,0,5">
                     <TextBlock Text="Place Type" Style="{StaticResource PrimaryTextBlock}" />
-                    <TextBox Text="{Binding Location.PlaceType, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
-                             Style="{StaticResource PrimaryTextBox}" Width="200"/>
+                    <TextBox Text="{Binding PlaceType, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+             Style="{StaticResource PrimaryTextBox}" Width="200"/>
                 </WrapPanel>
-            </StackPanel>
+               </StackPanel>
         </GroupBox>
 
         <!-- Response Section -->

@@ -27,171 +27,138 @@
                         <i:InvokeCommandAction Command="{Binding ComboBoxSelectionChanged}" CommandParameter="{Binding ElementName=DropList, Path=SelectedItem}" />
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
-                <system:String>Students</system:String>
-                <system:String>Subjects</system:String>
-                <system:String>Animals</system:String>
+                <system:String>Customers</system:String>
+                <system:String>Guides</system:String>
+                <system:String>Tours</system:String>
+                <system:String>Locations</system:String>
+                <system:String>Bookings</system:String>
             </ComboBox>
             <TextBlock Text="{Binding FirstCondition}" VerticalAlignment="Center" />
             <TextBox Text="{Binding SecondCondition}" VerticalAlignment="Center" Height="22"  Width="200" Margin="5,0" Visibility="{Binding Path=IsVisible, Converter={StaticResource BoolToVis}}" />
             <Button Content="Search" Command="{Binding Search}" DockPanel.Dock="Right" Style="{StaticResource PrimaryButton}" Tag="&#xE721;" />
         </DockPanel>
-        <ListView Visibility="{Binding Path=AreStudentsVisible, Converter={StaticResource BoolToVis}}" Grid.Row="1" ItemsSource="{Binding Students}" BorderThickness="0" ItemContainerStyle="{StaticResource ListViewPrimaryItem}">
+        <ListView Visibility="{Binding Path=AreCustomersVisible, Converter={StaticResource BoolToVis}}" Grid.Row="1" ItemsSource="{Binding Customers}" BorderThickness="0" ItemContainerStyle="{StaticResource ListViewPrimaryItem}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Name}" />
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                    <GridViewColumn Header="Last name" DisplayMemberBinding="{Binding LastName}">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding LastName}" />
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                    <GridViewColumn Header="PESEL" DisplayMemberBinding="{Binding PESEL}">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding PESEL}" />
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                    <GridViewColumn Header="Date of birth" DisplayMemberBinding="{Binding BirthDate}">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding BirthDate}"/>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                    <GridViewColumn Header="Subjects" Width="200">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <Expander Header="View" Padding="2">
-                                    <ItemsControl ItemsSource="{Binding Subjects}">
-                                        <ItemsControl.ItemTemplate>
-                                            <DataTemplate>
-                                                <Grid Margin="0,0,0,5">
-                                                    <TextBlock Text="{Binding Name}" />
-                                                </Grid>
-                                            </DataTemplate>
-                                        </ItemsControl.ItemTemplate>
-                                    </ItemsControl>
-                                </Expander>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
+                    <GridViewColumn Header="First Name" DisplayMemberBinding="{Binding FirstName}" />
+                    <GridViewColumn Header="Last Name" DisplayMemberBinding="{Binding LastName}" />
+                    <GridViewColumn Header="Email" DisplayMemberBinding="{Binding Email}" />
+                    <GridViewColumn Header="Phone" DisplayMemberBinding="{Binding PhoneNumber}" />
                     <GridViewColumn Header="Edit">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Command="{Binding DataContext.Edit, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" CommandParameter="{Binding StudentId}" Style="{StaticResource SecondaryButton}" Tag="&#xE70F;" />
+                                <Button Command="{Binding DataContext.Edit, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" CommandParameter="{Binding Id}" Style="{StaticResource SecondaryButton}" Tag="&#xE70F;" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                     <GridViewColumn Header="Remove">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Command="{Binding DataContext.Remove, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" CommandParameter="{Binding StudentId}" Style="{StaticResource SecondaryButton}" Tag="&#xE74D;" />
+                                <Button Command="{Binding DataContext.Remove, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" CommandParameter="{Binding Id}" Style="{StaticResource SecondaryButton}" Tag="&#xE74D;" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView Visibility="{Binding Path=AreSubjectsVisible, Converter={StaticResource BoolToVis}}" Grid.Row="1" ItemsSource="{Binding Subjects}" BorderThickness="0" ItemContainerStyle="{StaticResource ListViewPrimaryItem}">
+        <ListView Visibility="{Binding Path=AreGuidesVisible, Converter={StaticResource BoolToVis}}" Grid.Row="1" ItemsSource="{Binding Guides}" BorderThickness="0" ItemContainerStyle="{StaticResource ListViewPrimaryItem}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Name}" />
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                    <GridViewColumn Header="Semester" DisplayMemberBinding="{Binding Semester}">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Semester}" />
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                    <GridViewColumn Header="Lecturer" DisplayMemberBinding="{Binding Lecturer}">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Lecturer}" />
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                    <GridViewColumn Header="Students" Width="200">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <Expander Header="View" Padding="2">
-                                    <ItemsControl ItemsSource="{Binding Students}">
-                                        <ItemsControl.ItemTemplate>
-                                            <DataTemplate>
-                                                <Grid Margin="0,0,0,5">
-                                                    <TextBlock>
-                                                        <TextBlock.Text>
-                                                            <MultiBinding StringFormat=" {0} {1} ">
-                                                                <Binding Path="Name"/>
-                                                                <Binding Path="LastName"/>
-                                                            </MultiBinding>
-                                                        </TextBlock.Text>
-                                                    </TextBlock>
-                                                </Grid>
-                                            </DataTemplate>
-                                        </ItemsControl.ItemTemplate>
-                                    </ItemsControl>
-                                </Expander>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
+                    <GridViewColumn Header="First Name" DisplayMemberBinding="{Binding FirstName}" />
+                    <GridViewColumn Header="Last Name" DisplayMemberBinding="{Binding LastName}" />
+                    <GridViewColumn Header="Specialization" DisplayMemberBinding="{Binding Specialization}" />
+                    <GridViewColumn Header="Experience" DisplayMemberBinding="{Binding ExperienceYears}" />
+                    <GridViewColumn Header="Languages" DisplayMemberBinding="{Binding Languages}" />
                     <GridViewColumn Header="Edit">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Command="{Binding DataContext.Edit, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" CommandParameter="{Binding SubjectId}" Style="{StaticResource SecondaryButton}" Tag="&#xE70F;" />
+                                <Button Command="{Binding DataContext.Edit, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" CommandParameter="{Binding Id}" Style="{StaticResource SecondaryButton}" Tag="&#xE70F;" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                     <GridViewColumn Header="Remove">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Command="{Binding DataContext.Remove, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" CommandParameter="{Binding SubjectId}" Style="{StaticResource SecondaryButton}" Tag="&#xE74D;" />
+                                <Button Command="{Binding DataContext.Remove, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" CommandParameter="{Binding Id}" Style="{StaticResource SecondaryButton}" Tag="&#xE74D;" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView Visibility="{Binding Path=AreAnimalsVisible, Converter={StaticResource BoolToVis}}" Grid.Row="1" ItemsSource="{Binding Animals}" BorderThickness="0" ItemContainerStyle="{StaticResource ListViewPrimaryItem}">
+        <ListView Visibility="{Binding Path=AreToursVisible, Converter={StaticResource BoolToVis}}" Grid.Row="1" ItemsSource="{Binding Tours}" BorderThickness="0" ItemContainerStyle="{StaticResource ListViewPrimaryItem}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}">
+                    <GridViewColumn Header="Tour Name" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="Destination" DisplayMemberBinding="{Binding Destination}" />
+                    <GridViewColumn Header="Date" DisplayMemberBinding="{Binding StartDate}" />
+                    <GridViewColumn Header="Guide" DisplayMemberBinding="{Binding Guide.LastName}" />
+                    <GridViewColumn Header="Edit">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding Name}" />
+                                <Button Command="{Binding DataContext.Edit, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" CommandParameter="{Binding Id}" Style="{StaticResource SecondaryButton}" Tag="&#xE70F;" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header="Species" DisplayMemberBinding="{Binding Species}">
+                    <GridViewColumn Header="Remove">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding Species}" />
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                    <GridViewColumn Header="Age" DisplayMemberBinding="{Binding Age}">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Age}" />
+                                <Button Command="{Binding DataContext.Remove, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" CommandParameter="{Binding Id}" Style="{StaticResource SecondaryButton}" Tag="&#xE74D;" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
+        <ListView Visibility="{Binding Path=AreLocationsVisible, Converter={StaticResource BoolToVis}}" Grid.Row="1" ItemsSource="{Binding Locations}" BorderThickness="0" ItemContainerStyle="{StaticResource ListViewPrimaryItem}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Location Name" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="Address" DisplayMemberBinding="{Binding Address}" />
+                    <GridViewColumn Header="Place type" DisplayMemberBinding="{Binding PlaceType}" />
+                    <GridViewColumn Header="Edit">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Command="{Binding DataContext.Edit, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" CommandParameter="{Binding Id}" Style="{StaticResource SecondaryButton}" Tag="&#xE70F;" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Remove">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Command="{Binding DataContext.Remove, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" CommandParameter="{Binding Id}" Style="{StaticResource SecondaryButton}" Tag="&#xE74D;" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ListView Visibility="{Binding Path=AreBookingsVisible, Converter={StaticResource BoolToVis}}" Grid.Row="1" ItemsSource="{Binding Bookings}" BorderThickness="0" ItemContainerStyle="{StaticResource ListViewPrimaryItem}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Booking ID" DisplayMemberBinding="{Binding Id}" />
+                    <GridViewColumn Header="Customer FirstName" DisplayMemberBinding="{Binding Customer.FirstName}" />
+                    <GridViewColumn Header="Customer LastName" DisplayMemberBinding="{Binding Customer.LastName}" />
+                    <GridViewColumn Header="Tour" DisplayMemberBinding="{Binding Tour.Name}" />
+                    <GridViewColumn Header="Booking Date" DisplayMemberBinding="{Binding BookingDate}" />
+                    <GridViewColumn Header="Edit">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Command="{Binding DataContext.Edit, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" CommandParameter="{Binding Id}" Style="{StaticResource SecondaryButton}" Tag="&#xE70F;" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Remove">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Command="{Binding DataContext.Remove, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" CommandParameter="{Binding Id}" Style="{StaticResource SecondaryButton}" Tag="&#xE74D;" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
 
     </Grid>
 </UserControl>

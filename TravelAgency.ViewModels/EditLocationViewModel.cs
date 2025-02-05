@@ -157,6 +157,11 @@ namespace TravelAgency.ViewModels
                 existingLocation.Description = Description;
                 existingLocation.Address = Address;
                 existingLocation.PlaceType = PlaceType;
+
+                OnPropertyChanged(nameof(Name));
+                OnPropertyChanged(nameof(Description));
+                OnPropertyChanged(nameof(Address));
+                OnPropertyChanged(nameof(PlaceType));
             }
             else
             {
