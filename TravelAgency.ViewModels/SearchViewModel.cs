@@ -351,7 +351,7 @@ namespace TravelAgency.ViewModels
         {
             if (obj is not null)
             {
-                if (FirstCondition == "whose name contains")
+                if (FirstCondition == "whose name contains") // Customers
                 {
                     int customerId = (int)obj;
                     EditCustomerViewModel editCustomerViewModel = new EditCustomerViewModel(_context, _dialogService)
@@ -362,10 +362,10 @@ namespace TravelAgency.ViewModels
                     if (instance is not null)
                     {
                         instance.CustomersSubView = editCustomerViewModel;
-                        instance.SelectedTab = 0;
+                        instance.SelectedTab = 2; // Assuming Customers tab is at index 0
                     }
                 }
-                else if (FirstCondition == "with specialization")
+                else if (FirstCondition == "with specialization") // Guides
                 {
                     int guideId = (int)obj;
                     EditGuideViewModel editGuideViewModel = new EditGuideViewModel(_context, _dialogService)
@@ -376,10 +376,10 @@ namespace TravelAgency.ViewModels
                     if (instance is not null)
                     {
                         instance.GuidesSubView = editGuideViewModel;
-                        instance.SelectedTab = 2;
+                        instance.SelectedTab = 3; 
                     }
                 }
-                else if (FirstCondition == "with destination")
+                else if (FirstCondition == "with destination") // Tours
                 {
                     int tourId = (int)obj;
                     EditTourViewModel editTourViewModel = new EditTourViewModel(_context, _dialogService)
@@ -390,10 +390,10 @@ namespace TravelAgency.ViewModels
                     if (instance is not null)
                     {
                         instance.ToursSubView = editTourViewModel;
-                        instance.SelectedTab = 1;
+                        instance.SelectedTab = 5;
                     }
                 }
-                else if (FirstCondition == "located at")
+                else if (FirstCondition == "located at") // Locations
                 {
                     int locationId = (int)obj;
                     EditLocationViewModel editLocationViewModel = new EditLocationViewModel(_context, _dialogService)
@@ -404,7 +404,21 @@ namespace TravelAgency.ViewModels
                     if (instance is not null)
                     {
                         instance.LocationsSubView = editLocationViewModel;
-                        instance.SelectedTab = 3;
+                        instance.SelectedTab = 4;
+                    }
+                }
+                else if (FirstCondition == "booked by Customer ID") // Bookings
+                {
+                    int bookingId = (int)obj;
+                    EditBookingViewModel editBookingViewModel = new EditBookingViewModel(_context, _dialogService)
+                    {
+                        BookingId = bookingId
+                    };
+                    var instance = MainWindowViewModel.Instance();
+                    if (instance is not null)
+                    {
+                        instance.BookingsSubView = editBookingViewModel;
+                        instance.SelectedTab = 1; 
                     }
                 }
             }
@@ -427,7 +441,7 @@ namespace TravelAgency.ViewModels
         {
             if (obj is not null)
             {
-                if (FirstCondition == "whose name contains")
+                if (FirstCondition == "whose name contains") // Customers
                 {
                     int customerId = (int)obj;
                     var customer = _context.Customers.Find(customerId);
@@ -440,24 +454,26 @@ namespace TravelAgency.ViewModels
                         }
                         _context.Customers.Remove(customer);
                         _context.SaveChanges();
+                        Customers.Remove(customer); // Update the ObservableCollection
                     }
                 }
-                else if (FirstCondition == "with specialization")
+                else if (FirstCondition == "with specialization") // Guides
                 {
                     int guideId = (int)obj;
                     var guide = _context.Guides.Find(guideId);
                     if (guide != null)
                     {
-                        DialogResult = _dialogService.Show(guide.FirstName);
+                        DialogResult = _dialogService.Show($"{guide.FirstName} {guide.LastName}");
                         if (DialogResult == false)
                         {
                             return;
                         }
                         _context.Guides.Remove(guide);
                         _context.SaveChanges();
+                        Guides.Remove(guide); // Update the ObservableCollection
                     }
                 }
-                else if (FirstCondition == "with destination")
+                else if (FirstCondition == "with destination") // Tours
                 {
                     int tourId = (int)obj;
                     var tour = _context.Tours.Find(tourId);
@@ -470,9 +486,10 @@ namespace TravelAgency.ViewModels
                         }
                         _context.Tours.Remove(tour);
                         _context.SaveChanges();
+                        Tours.Remove(tour); // Update the ObservableCollection
                     }
                 }
-                else if (FirstCondition == "located at")
+                else if (FirstCondition == "located at") // Locations
                 {
                     int locationId = (int)obj;
                     var location = _context.Locations.Find(locationId);
@@ -485,6 +502,23 @@ namespace TravelAgency.ViewModels
                         }
                         _context.Locations.Remove(location);
                         _context.SaveChanges();
+                        Locations.Remove(location); // Update the ObservableCollection
+                    }
+                }
+                else if (FirstCondition == "booked by Customer ID") // Bookings
+                {
+                    int bookingId = (int)obj;
+                    var booking = _context.Bookings.Find(bookingId);
+                    if (booking != null)
+                    {
+                        DialogResult = _dialogService.Show($"Booking ID: {booking.Id}");
+                        if (DialogResult == false)
+                        {
+                            return;
+                        }
+                        _context.Bookings.Remove(booking);
+                        _context.SaveChanges();
+                        Bookings.Remove(booking); // Update the ObservableCollection
                     }
                 }
             }

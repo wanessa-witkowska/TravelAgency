@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.viewmodels\\searchviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|solutionrelative:travelagency.viewmodels\\searchviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.views\\searchview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{C1B59DE2-3942-4B1C-953F-22ECEB34AC53}|TravelAgency.Views\\TravelAgency.Views.csproj|solutionrelative:travelagency.views\\searchview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{800D560D-587B-4206-B51C-A31ABD550E5E}|TravelAgency.Models\\TravelAgency.Models.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.models\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{800D560D-587B-4206-B51C-A31ABD550E5E}|TravelAgency.Models\\TravelAgency.Models.csproj|solutionrelative:travelagency.models\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.viewmodels\\searchviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E966CAC6-F402-4AD8-BB27-6352FEFCF42A}|TravelAgency.ViewModels\\TravelAgency.ViewModels.csproj|solutionrelative:travelagency.viewmodels\\searchviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{800D560D-587B-4206-B51C-A31ABD550E5E}|TravelAgency.Models\\TravelAgency.Models.csproj|c:\\users\\wanessa\\documents\\github\\travelagency\\travelagency.models\\tour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -250,23 +250,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "SearchView.xaml",
               "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\SearchView.xaml",
               "RelativeDocumentMoniker": "TravelAgency.Views\\SearchView.xaml",
-              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\SearchView.xaml*",
-              "RelativeToolTip": "TravelAgency.Views\\SearchView.xaml*",
+              "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Views\\SearchView.xaml",
+              "RelativeToolTip": "TravelAgency.Views\\SearchView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-02-05T16:44:04.73Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Location.cs",
               "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Models\\Location.cs",
               "RelativeDocumentMoniker": "TravelAgency.Models\\Location.cs",
@@ -292,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Guide.cs",
               "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.Models\\Guide.cs",
               "RelativeDocumentMoniker": "TravelAgency.Models\\Guide.cs",
@@ -331,13 +331,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "SearchViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\SearchViewModel.cs",
               "RelativeDocumentMoniker": "TravelAgency.ViewModels\\SearchViewModel.cs",
               "ToolTip": "C:\\Users\\Wanessa\\Documents\\GitHub\\TravelAgency\\TravelAgency.ViewModels\\SearchViewModel.cs",
               "RelativeToolTip": "TravelAgency.ViewModels\\SearchViewModel.cs",
-              "ViewState": "AQIAANQBAAAAAAAAAAAuwOMBAAAjAAAA",
+              "ViewState": "AQIAAIEBAAAAAAAAAAAswIgBAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-02T22:11:12.689Z",
               "EditorCaption": ""
