@@ -23,7 +23,9 @@ namespace TravelAgency.Models
         [Required(ErrorMessage = "Typ miejsca jest wymagany.")]
         [RegularExpression("^(Museum|Mountain|Castle)$", ErrorMessage = "Typ miejsca musi być jednym z: Museum, Mountain, Castle.")]
         public string PlaceType { get; set; } = string.Empty;
-    }
 
+        public int GuideId { get; set; }
+        public virtual Guide? Guide { get; set; } 
+    }
 
 }

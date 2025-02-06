@@ -20,33 +20,95 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
+
+        <!-- Przyciski "Back" i "Save" -->
         <Button Content="Back" Grid.Row="0" Grid.Column="0" Command="{Binding Back}" Margin="5,5,5,0" Width="100" HorizontalAlignment="Left" Style="{StaticResource PrimaryButton}" Tag="&#xE72B;" />
-        <Button Content="Save" Grid.Row="0" Grid.Column="1" Command="{Binding Save}" Margin="5,5,5,0" Width="100" HorizontalAlignment="Right" Style="{StaticResource PrimaryButton}" Tag="&#xE74E;" />
-        <GroupBox Header="Guide Data" Grid.Row="1" Grid.ColumnSpan="2" Margin="5" Padding="10">
+        <Button Content="Save" Grid.Row="0" Grid.Column="3" Command="{Binding Save}" Margin="5,5,5,0" Width="100" HorizontalAlignment="Right" Style="{StaticResource PrimaryButton}" Tag="&#xE74E;" />
+
+        <!-- Sekcja danych przewodnika -->
+        <GroupBox Header="Guide Data" Grid.Row="1" Grid.Column="0" Margin="5" Padding="10">
             <StackPanel>
                 <WrapPanel Margin="0,0,0,5">
-                    <TextBlock Text="First Name:" Style="{StaticResource PrimaryTextBlock}" Width="100"/>
-                    <TextBox Text="{Binding FirstName, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" Width="200"/>
+                    <TextBlock Text="First Name" Style="{StaticResource PrimaryTextBlock}" />
+                    <TextBox Text="{Binding FirstName, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" />
                 </WrapPanel>
                 <WrapPanel Margin="0,0,0,5">
-                    <TextBlock Text="Last Name:" Style="{StaticResource PrimaryTextBlock}" Width="100"/>
-                    <TextBox Text="{Binding LastName, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" Width="200"/>
+                    <TextBlock Text="Last Name" Style="{StaticResource PrimaryTextBlock}" />
+                    <TextBox Text="{Binding LastName, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" />
                 </WrapPanel>
                 <WrapPanel Margin="0,0,0,5">
-                    <TextBlock Text="Specialization:" Style="{StaticResource PrimaryTextBlock}" Width="100"/>
-                    <TextBox Text="{Binding Specialization, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" Width="200"/>
+                    <TextBlock Text="Specialization" Style="{StaticResource PrimaryTextBlock}" />
+                    <TextBox Text="{Binding Specialization, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" />
                 </WrapPanel>
                 <WrapPanel Margin="0,0,0,5">
-                    <TextBlock Text="Experience (Years):" Style="{StaticResource PrimaryTextBlock}" Width="100"/>
-                    <TextBox Text="{Binding ExperienceYears, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" Width="200"/>
+                    <TextBlock Text="Experience (Years)" Style="{StaticResource PrimaryTextBlock}" />
+                    <TextBox Text="{Binding ExperienceYears, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" />
                 </WrapPanel>
                 <WrapPanel Margin="0,0,0,5">
-                    <TextBlock Text="Languages:" Style="{StaticResource PrimaryTextBlock}" Width="100"/>
-                    <TextBox Text="{Binding Languages, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" Width="200"/>
+                    <TextBlock Text="Languages" Style="{StaticResource PrimaryTextBlock}" />
+                    <TextBox Text="{Binding Languages, ValidatesOnDataErrors=True}" Style="{StaticResource PrimaryTextBox}" />
                 </WrapPanel>
             </StackPanel>
         </GroupBox>
-        <TextBlock Text="{Binding Response}" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="0,0,0,5"/>
+
+        <!-- Przypisane lokalizacje -->
+        <GroupBox Header="Assigned Locations" Grid.Row="1" Grid.Column="1" Margin="0,5,5,5" Padding="10">
+            <ListView x:Name="Assigned" ItemsSource="{Binding AssignedLocations}" BorderThickness="0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="0,0,0,5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0">
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat=" {0} - {1} ">
+                                        <Binding Path="Name"/>
+                                        <Binding Path="PlaceType"/>
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </GroupBox>
+
+        <!-- Przyciski do przypisywania i usuwania lokalizacji -->
+        <StackPanel Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" Margin="5">
+            <Button Margin="0,0,0,2" Command="{Binding AddLocationCommand}" CommandParameter="{Binding ElementName=Available, Path=SelectedItem}" Style="{StaticResource SecondaryButton}" Width="22" Height="22" Tag="&#xE760;" />
+            <Button Margin="0,2,0,0" Command="{Binding RemoveLocationCommand}" CommandParameter="{Binding ElementName=Assigned, Path=SelectedItem}" Style="{StaticResource SecondaryButton}" Width="22" Height="22" Tag="&#xE760;" />
+        </StackPanel>
+
+        <!-- Dostępne lokalizacje -->
+        <GroupBox Header="Available Locations" Grid.Row="1" Grid.Column="3" Margin="0,5,5,5" Padding="10">
+            <ListView x:Name="Available" ItemsSource="{Binding AvailableLocations}" BorderThickness="0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="0,0,0,5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0">
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat=" {0} - {1} ">
+                                        <Binding Path="Name"/>
+                                        <Binding Path="PlaceType"/>
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </GroupBox>
+
+        <!-- Komunikat odpowiedzi -->
+        <TextBlock Text="{Binding Response}" Grid.Row="2" Grid.ColumnSpan="4" HorizontalAlignment="Center" Margin="0,0,0,5"/>
     </Grid>
 </UserControl>

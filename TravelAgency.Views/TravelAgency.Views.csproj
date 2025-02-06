@@ -76,6 +76,12 @@
     <Compile Update="SubjectsView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+	<Compile Update="BookingReportView.xaml.cs">
+	    <SubType>Code</SubType>
+	</Compile>
+	<Compile Update="CustomerReportView.xaml.cs">
+		<SubType>Code</SubType>
+	</Compile>
   </ItemGroup>
 
   <ItemGroup>

@@ -32,6 +32,19 @@ namespace TravelAgency.ViewModels
             }
         }
 
+        // Dodaj kolekcję dostępnych lokalizacji
+        private ObservableCollection<Location> _availableLocations = new ObservableCollection<Location>();
+        public ObservableCollection<Location> AvailableLocations
+        {
+            get => _availableLocations;
+            set
+            {
+                _availableLocations = value;
+                OnPropertyChanged(nameof(AvailableLocations));
+            }
+        }
+
+        // Komendy
         private ICommand? _add = null;
         public ICommand? Add
         {
@@ -45,15 +58,6 @@ namespace TravelAgency.ViewModels
             }
         }
 
-        private void AddNewTour(object? obj)
-        {
-            var instance = MainWindowViewModel.Instance();
-            if (instance is not null)
-            {
-                instance.ToursSubView = new AddTourViewModel(_context, _dialogService);
-            }
-        }
-
         private ICommand? _edit = null;
         public ICommand? Edit
         {
@@ -64,6 +68,54 @@ namespace TravelAgency.ViewModels
                     _edit = new RelayCommand<object>(EditTour);
                 }
                 return _edit;
+            }
+        }
+
+        private ICommand? _remove = null;
+        public ICommand? Remove
+        {
+            get
+            {
+                if (_remove is null)
+                {
+                    _remove = new RelayCommand<object>(RemoveTour);
+                }
+                return _remove;
+            }
+        }
+
+        // Konstruktor
+        public ToursViewModel(travelAgencyContext context, IDialogService dialogService)
+        {
+            _context = context;
+            _dialogService = dialogService;
+
+            _context.Database.EnsureCreated();
+            _context.Tours.Load();
+            Tours = _context.Tours.Local.ToObservableCollection();
+
+            // Załaduj dostępne lokalizacje z bazy danych i utwórz kopię
+            _context.Locations.Load();
+            foreach (var location in _context.Locations.Local)
+            {
+                AvailableLocations.Add(new Location
+                {
+                    Id = location.Id,
+                    Name = location.Name,
+                    Description = location.Description,
+                    Address = location.Address,
+                    PlaceType = location.PlaceType
+                });
+            }
+        }
+
+        // Metody
+        private void AddNewTour(object? obj)
+        {
+            var instance = MainWindowViewModel.Instance();
+            if (instance is not null)
+            {
+                instance.ToursSubView = new AddTourViewModel(_context, _dialogService);
             }
         }
 
@@ -81,19 +133,6 @@ namespace TravelAgency.ViewModels
                 {
                     instance.ToursSubView = editTourViewModel;
                 }
-            }
-        }
-
-        private ICommand? _remove = null;
-        public ICommand? Remove
-        {
-            get
-            {
-                if (_remove is null)
-                {
-                    _remove = new RelayCommand<object>(RemoveTour);
-                }
-                return _remove;
             }
         }
 
@@ -115,16 +154,6 @@ namespace TravelAgency.ViewModels
                     _context.SaveChanges();
                 }
             }
-        }
-
-        public ToursViewModel(travelAgencyContext context, IDialogService dialogService)
-        {
-            _context = context;
-            _dialogService = dialogService;
-
-            _context.Database.EnsureCreated();
-            _context.Tours.Load();
-            Tours = _context.Tours.Local.ToObservableCollection();
         }
     }
 }

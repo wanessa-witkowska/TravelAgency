@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace TravelAgency.Models
 {
-    
+
     public class Guide
     {
         public int Id { get; set; } = 0;
@@ -27,6 +28,8 @@ namespace TravelAgency.Models
         [Required(ErrorMessage = "Języki są wymagane.")]
         [StringLength(200, ErrorMessage = "Lista języków nie może przekraczać 200 znaków.")]
         public string Languages { get; set; } = string.Empty;
+
+        public virtual ObservableCollection<Location> Locations { get; set; } = new ObservableCollection<Location>();
     }
 
 

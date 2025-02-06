@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="TravelAgency.Views.BookingReportView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Search Filters -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
+            <TextBlock Text="Booking status: "/>
+            <TextBox Text="{Binding SearchStatus, UpdateSourceTrigger=PropertyChanged}" Width="200" Margin="5" />
+            <TextBlock Text="Booking date: "/>
+            <DatePicker SelectedDate="{Binding SearchBookingDate, UpdateSourceTrigger=PropertyChanged}" Margin="5" />
+        </StackPanel>
+
+        <!-- Bookings List -->
+        <ListView Grid.Row="2" ItemsSource="{Binding Bookings}" Margin="10">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Booking ID" DisplayMemberBinding="{Binding Id}" />
+                    <GridViewColumn Header="Tour Name" DisplayMemberBinding="{Binding Tour.Name}" />
+                    <GridViewColumn Header="Customer" DisplayMemberBinding="{Binding Customer.FirstName}" />
+                    <GridViewColumn Header="Booking Date" DisplayMemberBinding="{Binding BookingDate, StringFormat={}{0:dd/MM/yyyy}}" />
+                    <GridViewColumn Header="Status" DisplayMemberBinding="{Binding Status}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</UserControl>

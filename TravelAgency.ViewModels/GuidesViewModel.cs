@@ -32,6 +32,32 @@ namespace TravelAgency.ViewModels
             }
         }
 
+        private Guide? _selectedGuide;
+        public Guide? SelectedGuide
+        {
+            get => _selectedGuide;
+            set
+            {
+                _selectedGuide = value;
+                OnPropertyChanged(nameof(SelectedGuide));
+                IsLocationsExpanded = _selectedGuide != null;
+            }
+        }
+
+        private bool _isLocationsExpanded;
+        public bool IsLocationsExpanded
+        {
+            get => _isLocationsExpanded;
+            set
+            {
+                _isLocationsExpanded = value;
+                OnPropertyChanged(nameof(IsLocationsExpanded));
+            }
+        }
+
+     
+        public ObservableCollection<Location>? SelectedGuideLocations => SelectedGuide?.Locations;
+
         private ICommand? _add = null;
         public ICommand? Add
         {
@@ -123,7 +149,7 @@ namespace TravelAgency.ViewModels
             _dialogService = dialogService;
 
             _context.Database.EnsureCreated();
-            _context.Guides.Load();
+            _context.Guides.Include(g => g.Locations).Load(); // Ładowanie lokalizacji wraz z przewodnikami
             Guides = _context.Guides.Local.ToObservableCollection();
         }
     }

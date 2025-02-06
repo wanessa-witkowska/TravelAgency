@@ -1,140 +1,139 @@
-﻿using System;
-using TravelAgency.Interfaces;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using Microsoft.EntityFrameworkCore;
+using System.Windows.Input;
 using TravelAgency.Data;
+using TravelAgency.Interfaces;
+using TravelAgency.ViewModels;
 
-namespace TravelAgency.ViewModels;
-
-public class MainWindowViewModel : ViewModelBase
+namespace TravelAgency.ViewModels
 {
-    private readonly travelAgencyContext _context;
-    private readonly IDialogService _dialogService;
-
-    private int _selectedTab;
-    public int SelectedTab
+    public class MainWindowViewModel : ViewModelBase
     {
-        get
-        {
-            return _selectedTab;
-        }
-        set
-        {
-            _selectedTab = value;
-            OnPropertyChanged(nameof(SelectedTab));
-        }
-    }
+        private readonly travelAgencyContext _context;
+        private readonly IDialogService _dialogService;
 
-    private object? _bookingsSubView = null;
-    public object? BookingsSubView
-    {
-        get
+        private int _selectedTab;
+        public int SelectedTab
         {
-            return _bookingsSubView;
+            get => _selectedTab;
+            set
+            {
+                _selectedTab = value;
+                OnPropertyChanged(nameof(SelectedTab));
+            }
         }
-        set
-        {
-            _bookingsSubView = value;
-            OnPropertyChanged(nameof(BookingsSubView));
-        }
-    }
 
-    private object? _customersSubView = null;
-    public object? CustomersSubView
-    {
-        get
+        private object? _searchSubView;
+        public object? SearchSubView
         {
-            return _customersSubView;
+            get => _searchSubView;
+            set
+            {
+                _searchSubView = value;
+                OnPropertyChanged(nameof(SearchSubView));
+            }
         }
-        set
-        {
-            _customersSubView = value;
-            OnPropertyChanged(nameof(CustomersSubView));
-        }
-    }
 
-    private object? _guidesSubView = null;
-    public object? GuidesSubView
-    {
-        get
+        private object? _bookingsSubView;
+        public object? BookingsSubView
         {
-            return _guidesSubView;
+            get => _bookingsSubView;
+            set
+            {
+                _bookingsSubView = value;
+                OnPropertyChanged(nameof(BookingsSubView));
+            }
         }
-        set
-        {
-            _guidesSubView = value;
-            OnPropertyChanged(nameof(GuidesSubView));
-        }
-    }
 
-    private object? _locationsSubView = null;
-    public object? LocationsSubView
-    {
-        get
+        private object? _customersSubView;
+        public object? CustomersSubView
         {
-            return _locationsSubView;
+            get => _customersSubView;
+            set
+            {
+                _customersSubView = value;
+                OnPropertyChanged(nameof(CustomersSubView));
+            }
         }
-        set
-        {
-            _locationsSubView = value;
-            OnPropertyChanged(nameof(LocationsSubView));
-        }
-    }
 
-    private object? _toursSubView = null;
-    public object? ToursSubView
-    {
-        get
+        private object? _guidesSubView;
+        public object? GuidesSubView
         {
-            return _toursSubView;
+            get => _guidesSubView;
+            set
+            {
+                _guidesSubView = value;
+                OnPropertyChanged(nameof(GuidesSubView));
+            }
         }
-        set
-        {
-            _toursSubView = value;
-            OnPropertyChanged(nameof(ToursSubView));
-        }
-    }
 
-    private object? _searchSubView = null;
-    public object? SearchSubView
-    {
-        get
+        private object? _locationsSubView;
+        public object? LocationsSubView
         {
-            return _searchSubView;
+            get => _locationsSubView;
+            set
+            {
+                _locationsSubView = value;
+                OnPropertyChanged(nameof(LocationsSubView));
+            }
         }
-        set
+
+        private object? _toursSubView;
+        public object? ToursSubView
         {
-            _searchSubView = value;
-            OnPropertyChanged(nameof(SearchSubView));
+            get => _toursSubView;
+            set
+            {
+                _toursSubView = value;
+                OnPropertyChanged(nameof(ToursSubView));
+            }
         }
-    }
 
-    private static MainWindowViewModel? _instance = null;
-    public static MainWindowViewModel? Instance()
-    {
-        return _instance;
-    }
-
-    public MainWindowViewModel(
-        travelAgencyContext context, 
-        IDialogService dialogService,
-        IBookingService bookingService,
-        ICustomerService customerService,
-        IGuideService guideService,
-        ILocationService locationService,
-        ITourService tourService)
-    {
-        _context = context;
-        _dialogService = dialogService;
-
-        if (_instance is null)
+        private object? _bookingReportSubView;
+        public object? BookingReportSubView
         {
-            _instance = this;
+            get => _bookingReportSubView;
+            set
+            {
+                _bookingReportSubView = value;
+                OnPropertyChanged(nameof(BookingReportSubView));
+            }
         }
-        
-        BookingsSubView = new BookingsViewModel(_context, _dialogService);
-        CustomersSubView = new CustomersViewModel(_context, _dialogService);
-        GuidesSubView = new GuidesViewModel(_context, _dialogService);
-        LocationsSubView = new LocationsViewModel(_context, _dialogService);
-        ToursSubView = new ToursViewModel(_context, _dialogService);
-        SearchSubView = new SearchViewModel(_context, _dialogService);
+
+        private object? _customerReportSubView;
+        public object? CustomerReportSubView
+        {
+            get => _customerReportSubView;
+            set
+            {
+                _customerReportSubView = value;
+                OnPropertyChanged(nameof(CustomerReportSubView));
+            }
+        }
+
+        private static MainWindowViewModel? _instance = null;
+        public static MainWindowViewModel? Instance()
+        {
+            return _instance;
+        }
+
+        public MainWindowViewModel(travelAgencyContext context, IDialogService dialogService)
+        {
+            _context = context;
+            _dialogService = dialogService;
+
+            // Inicjalizacja widoków
+            SearchSubView = new SearchViewModel(_context, _dialogService);
+            BookingsSubView = new BookingsViewModel(_context, _dialogService);
+            CustomersSubView = new CustomersViewModel(_context, _dialogService);
+            GuidesSubView = new GuidesViewModel(_context, _dialogService);
+            LocationsSubView = new LocationsViewModel(_context, _dialogService);
+            ToursSubView = new ToursViewModel(_context, _dialogService);
+
+
+            BookingReportSubView = new BookingReportViewModel(_context);
+            CustomerReportSubView = new CustomerReportViewModel(_context);
+        }
     }
 }

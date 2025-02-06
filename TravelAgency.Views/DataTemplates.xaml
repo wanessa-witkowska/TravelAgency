@@ -53,4 +53,11 @@
     <DataTemplate DataType="{x:Type viewmodels:EditTourViewModel}">
         <views:EditTourView />
     </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewmodels:BookingReportViewModel}">
+        <views:BookingReportView />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewmodels:CustomerReportViewModel}">
+        <views:CustomerReportView />
+    </DataTemplate>
 </ResourceDictionary>

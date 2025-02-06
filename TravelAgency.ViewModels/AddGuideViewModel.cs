@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows.Input;
 using TravelAgency.Data;
@@ -14,26 +15,34 @@ namespace TravelAgency.ViewModels
         private readonly travelAgencyContext _context;
         private readonly IDialogService _dialogService;
 
-        public string Error => string.Empty;
-
-        public string this[string columnName]
+        // Właściwości dla lokalizacji
+        private ObservableCollection<Location> _assignedLocations = new ObservableCollection<Location>();
+        public ObservableCollection<Location> AssignedLocations
         {
-            get
+            get => _assignedLocations;
+            set
             {
-                if (columnName == "FirstName" && string.IsNullOrWhiteSpace(FirstName))
-                    return "First Name is required";
-                if (columnName == "LastName" && string.IsNullOrWhiteSpace(LastName))
-                    return "Last Name is required";
-                if (columnName == "Specialization" && string.IsNullOrWhiteSpace(Specialization))
-                    return "Specialization is required";
-                if (columnName == "ExperienceYears" && ExperienceYears < 0)
-                    return "Experience Years must be a non-negative number";
-                if (columnName == "Languages" && string.IsNullOrWhiteSpace(Languages))
-                    return "Languages field is required";
-                return string.Empty;
+                _assignedLocations = value;
+                OnPropertyChanged(nameof(AssignedLocations));
             }
         }
 
+        private ObservableCollection<Location> _availableLocations = new ObservableCollection<Location>();
+        public ObservableCollection<Location> AvailableLocations
+        {
+            get => _availableLocations;
+            set
+            {
+                _availableLocations = value;
+                OnPropertyChanged(nameof(AvailableLocations));
+            }
+        }
+
+        // Komendy
+        public ICommand AddLocationCommand { get; }
+        public ICommand RemoveLocationCommand { get; }
+
+        // Właściwości dla przewodnika
         private string _firstName = string.Empty;
         public string FirstName
         {
@@ -76,12 +85,62 @@ namespace TravelAgency.ViewModels
             set => SetProperty(ref _response, value);
         }
 
+        // Implementacja IDataErrorInfo
+        public string Error => string.Empty;
+
+        public string this[string columnName]
+        {
+            get
+            {
+                if (columnName == "FirstName" && string.IsNullOrWhiteSpace(FirstName))
+                    return "First Name is required";
+                if (columnName == "LastName" && string.IsNullOrWhiteSpace(LastName))
+                    return "Last Name is required";
+                if (columnName == "Specialization" && string.IsNullOrWhiteSpace(Specialization))
+                    return "Specialization is required";
+                if (columnName == "ExperienceYears" && ExperienceYears < 0)
+                    return "Experience Years must be a non-negative number";
+                if (columnName == "Languages" && string.IsNullOrWhiteSpace(Languages))
+                    return "Languages field is required";
+                return string.Empty;
+            }
+        }
+
+        // Konstruktor
         public AddGuideViewModel(travelAgencyContext context, IDialogService dialogService)
         {
             _context = context;
             _dialogService = dialogService;
+
+            // Załaduj dostępne lokalizacje z bazy danych
+            _context.Locations.Load();
+            AvailableLocations = _context.Locations.Local.ToObservableCollection();
+
+            // Inicjalizacja komend
+            AddLocationCommand = new RelayCommand<object>(AddLocation);
+            RemoveLocationCommand = new RelayCommand<object>(RemoveLocation);
         }
 
+        // Metody do zarządzania lokalizacjami
+        private void AddLocation(object? obj)
+        {
+            if (obj is Location location)
+            {
+                AvailableLocations.Remove(location);
+                AssignedLocations.Add(location);
+            }
+        }
+
+        private void RemoveLocation(object? obj)
+        {
+            if (obj is Location location)
+            {
+                AssignedLocations.Remove(location);
+                AvailableLocations.Add(location);
+            }
+        }
+
+        // Komenda zapisywania przewodnika
         private ICommand? _save;
         public ICommand Save => _save ??= new RelayCommand<object>(SaveGuide);
 
@@ -99,7 +158,8 @@ namespace TravelAgency.ViewModels
                 LastName = LastName,
                 Specialization = Specialization,
                 ExperienceYears = ExperienceYears,
-                Languages = Languages
+                Languages = Languages,
+                Locations = new ObservableCollection<Location>(AssignedLocations)
             };
 
             _context.Guides.Add(newGuide);
@@ -108,6 +168,7 @@ namespace TravelAgency.ViewModels
             Response = "Guide successfully added";
         }
 
+        // Komenda powrotu
         private ICommand? _back;
         public ICommand Back => _back ??= new RelayCommand<object>(NavigateBack);
 
@@ -120,6 +181,7 @@ namespace TravelAgency.ViewModels
             }
         }
 
+        // Walidacja
         private bool IsValid()
         {
             string[] properties = { "FirstName", "LastName", "Specialization", "ExperienceYears", "Languages" };

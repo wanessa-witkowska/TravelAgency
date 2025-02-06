@@ -1,5 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
 using TravelAgency.Data;
@@ -40,21 +42,162 @@ namespace TravelAgency.ViewModels
                     Specialization = _guide.Specialization;
                     ExperienceYears = _guide.ExperienceYears;
                     Languages = _guide.Languages;
+                    AssignedLocations = new ObservableCollection<Location>(_guide.Locations);
                 }
             }
         }
 
+        // Właściwości dla danych przewodnika
         public string FirstName { get; set; } = string.Empty;
         public string LastName { get; set; } = string.Empty;
         public string Specialization { get; set; } = string.Empty;
         public int ExperienceYears { get; set; } = 0;
         public string Languages { get; set; } = string.Empty;
 
-        public string Response { get; set; } = string.Empty;
+        // Właściwość Response
+        private string _response = string.Empty;
+        public string Response
+        {
+            get => _response;
+            set
+            {
+                _response = value;
+                OnPropertyChanged(nameof(Response));
+            }
+        }
 
+        // Właściwości dla lokalizacji
+        private ObservableCollection<Location> _assignedLocations = new ObservableCollection<Location>();
+        public ObservableCollection<Location> AssignedLocations
+        {
+            get => _assignedLocations;
+            set
+            {
+                _assignedLocations = value;
+                OnPropertyChanged(nameof(AssignedLocations));
+            }
+        }
+
+        private ObservableCollection<Location> _availableLocations = new ObservableCollection<Location>();
+        public ObservableCollection<Location> AvailableLocations
+        {
+            get => _availableLocations;
+            set
+            {
+                _availableLocations = value;
+                OnPropertyChanged(nameof(AvailableLocations));
+            }
+        }
+
+        // Komendy
         public ICommand Back => _back ??= new RelayCommand<object>(NavigateBack);
         private ICommand? _back;
 
+        public ICommand Save => _save ??= new RelayCommand<object>(SaveChanges);
+        private ICommand? _save;
+
+        public ICommand AddLocationCommand => _addLocationCommand ??= new RelayCommand<object>(AddLocation);
+        private ICommand? _addLocationCommand;
+
+        public ICommand RemoveLocationCommand => _removeLocationCommand ??= new RelayCommand<object>(RemoveLocation);
+        private ICommand? _removeLocationCommand;
+
+        // Konstruktor
+        public EditGuideViewModel(travelAgencyContext context, IDialogService dialogService)
+        {
+            _context = context;
+            _dialogService = dialogService;
+
+            // Załaduj dostępne lokalizacje z bazy danych
+            _context.Locations.Load();
+            AvailableLocations = new ObservableCollection<Location>(_context.Locations.Local);
+        }
+
+        // Metoda do ładowania przewodnika
+        private void LoadGuide()
+        {
+            Guide = _context.Guides
+                .Include(g => g.Locations)
+                .FirstOrDefault(g => g.Id == GuideId);
+
+            if (Guide != null)
+            {
+                // Usuń przypisane lokalizacje z dostępnych
+                foreach (var location in Guide.Locations)
+                {
+                    var availableLocation = AvailableLocations.FirstOrDefault(l => l.Id == location.Id);
+                    if (availableLocation != null)
+                    {
+                        AvailableLocations.Remove(availableLocation);
+                    }
+                }
+            }
+            else
+            {
+                Response = "Guide not found"; // Użyj właściwości Response
+            }
+        }
+
+        // Metoda do zapisywania zmian
+        private void SaveChanges(object? obj)
+        {
+            if (Guide == null)
+            {
+                Response = "No guide selected"; // Użyj właściwości Response
+                return;
+            }
+
+            if (!IsValid())
+            {
+                Response = "Please complete all required fields"; // Użyj właściwości Response
+                return;
+            }
+
+            var existingGuide = _context.Guides
+                .Include(g => g.Locations)
+                .FirstOrDefault(g => g.Id == Guide.Id);
+
+            if (existingGuide != null)
+            {
+                existingGuide.FirstName = FirstName;
+                existingGuide.LastName = LastName;
+                existingGuide.Specialization = Specialization;
+                existingGuide.ExperienceYears = ExperienceYears;
+                existingGuide.Languages = Languages;
+
+                // Zaktualizuj przypisane lokalizacje
+                existingGuide.Locations.Clear();
+                foreach (var location in AssignedLocations)
+                {
+                    existingGuide.Locations.Add(location);
+                }
+            }
+
+            _context.SaveChanges();
+            Response = "Guide details successfully updated"; // Użyj właściwości Response
+        }
+
+        // Metoda do dodawania lokalizacji
+        private void AddLocation(object? obj)
+        {
+            if (obj is Location location)
+            {
+                AvailableLocations.Remove(location);
+                AssignedLocations.Add(location);
+            }
+        }
+
+        // Metoda do usuwania lokalizacji
+        private void RemoveLocation(object? obj)
+        {
+            if (obj is Location location)
+            {
+                AssignedLocations.Remove(location);
+                AvailableLocations.Add(location);
+            }
+        }
+
+        // Metoda do nawigacji wstecz
         private void NavigateBack(object? obj)
         {
             var instance = MainWindowViewModel.Instance();
@@ -64,49 +207,7 @@ namespace TravelAgency.ViewModels
             }
         }
 
-        public ICommand Save => _save ??= new RelayCommand<object>(SaveChanges);
-        private ICommand? _save;
-
-        private void SaveChanges(object? obj)
-        {
-            if (Guide == null)
-            {
-                Response = "No guide selected";
-                return;
-            }
-
-            if (!IsValid())
-            {
-                Response = "Please complete all required fields";
-                return;
-            }
-
-            var existingGuide = _context.Guides.FirstOrDefault(g => g.Id == Guide.Id);
-            if (existingGuide != null)
-            {
-                existingGuide.FirstName = FirstName;
-                existingGuide.LastName = LastName;
-                existingGuide.Specialization = Specialization;
-                existingGuide.ExperienceYears = ExperienceYears;
-                existingGuide.Languages = Languages;
-            }
-            else
-            {
-                var newGuide = new Guide
-                {
-                    FirstName = FirstName,
-                    LastName = LastName,
-                    Specialization = Specialization,
-                    ExperienceYears = ExperienceYears,
-                    Languages = Languages
-                };
-                _context.Guides.Add(newGuide);
-            }
-
-            _context.SaveChanges();
-            Response = "Guide details successfully updated";
-        }
-
+        // Walidacja danych
         private bool IsValid()
         {
             return !string.IsNullOrEmpty(FirstName) &&
@@ -114,17 +215,6 @@ namespace TravelAgency.ViewModels
                    !string.IsNullOrEmpty(Specialization) &&
                    ExperienceYears >= 0 &&
                    !string.IsNullOrEmpty(Languages);
-        }
-
-        public EditGuideViewModel(travelAgencyContext context, IDialogService dialogService)
-        {
-            _context = context;
-            _dialogService = dialogService;
-        }
-
-        private void LoadGuide()
-        {
-            Guide = _context.Guides.FirstOrDefault(g => g.Id == GuideId);
         }
     }
 }

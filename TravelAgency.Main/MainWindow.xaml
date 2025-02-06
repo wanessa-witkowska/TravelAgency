@@ -17,28 +17,39 @@
 
     <Grid>
         <TabControl TabStripPlacement="Left" SelectedIndex="{Binding SelectedTab}" ItemContainerStyle="{StaticResource TabPrimaryItem}">
-            <TabItem Header="Search" Tag="&#xE773;">
+            <TabItem Header="Search" Tag="&#xE721;">
                 <ContentControl Content="{Binding SearchSubView}" />
             </TabItem>
-            
-            <TabItem Header="Bookings" Tag="&#xE77A;">
+
+            <TabItem Header="Bookings" Tag="&#xE8F1;">
                 <ContentControl Content="{Binding BookingsSubView}" Margin="0,0,-2,-2" />
             </TabItem>
 
-            <TabItem Header="Customers" Tag="&#xE735;">
+            <TabItem Header="Customers" Tag="&#xE716;">
                 <ContentControl Content="{Binding CustomersSubView}" />
             </TabItem>
 
-            <TabItem Header="Guides" Tag="&#xE774;">
+            <TabItem Header="Guides" Tag="&#xE77F;">
                 <ContentControl Content="{Binding GuidesSubView}" />
             </TabItem>
 
-            <TabItem Header="Locations" Tag="&#xE82B;">
+            <TabItem Header="Locations" Tag="&#xE707;">
                 <ContentControl Content="{Binding LocationsSubView}" />
             </TabItem>
 
-            <TabItem Header="Tours" Tag="&#xE82B;">
+            <TabItem Header="Tours" Tag="&#xE909;">
                 <ContentControl Content="{Binding ToursSubView}" />
+            </TabItem>
+
+            <TabItem Header="Reports" Tag="&#xE9E9;">
+                <TabControl TabStripPlacement="Top">
+                    <TabItem Header="Booking Report">
+                        <ContentControl Content="{Binding BookingReportSubView}" />
+                    </TabItem>
+                    <TabItem Header="Customer Report">
+                        <ContentControl Content="{Binding CustomerReportSubView}" />
+                    </TabItem>
+                </TabControl>
             </TabItem>
         </TabControl>
     </Grid>

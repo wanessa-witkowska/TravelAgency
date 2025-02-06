@@ -21,14 +21,16 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
         <!-- Back and Save Buttons -->
         <Button Content="Back" Grid.Row="0" Grid.Column="0" Command="{Binding Back}" Margin="5,5,5,0" Width="100" HorizontalAlignment="Left" Style="{StaticResource PrimaryButton}" Tag="&#xE72B;" />
-        <Button Content="Save" Grid.Row="0" Grid.Column="1" Command="{Binding Save}" Margin="5,5,5,0" Width="100" HorizontalAlignment="Right" Style="{StaticResource PrimaryButton}" Tag="&#xE74E;" />
+        <Button Content="Save" Grid.Row="0" Grid.Column="3" Command="{Binding Save}" Margin="5,5,5,0" Width="100" HorizontalAlignment="Right" Style="{StaticResource PrimaryButton}" Tag="&#xE74E;" />
 
         <!-- Guide Details Section -->
-        <GroupBox Header="Guide Details" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" Padding="10">
+        <GroupBox Header="Guide Details" Grid.Row="1" Grid.Column="0" Margin="5" Padding="10">
             <StackPanel>
                 <!-- First Name -->
                 <WrapPanel Margin="0,0,0,5">
@@ -62,7 +64,61 @@
             </StackPanel>
         </GroupBox>
 
+        <!-- Assigned Locations Section -->
+        <GroupBox Header="Assigned Locations" Grid.Row="1" Grid.Column="1" Margin="0,5,5,5" Padding="10">
+            <ListView x:Name="Assigned" ItemsSource="{Binding AssignedLocations}" BorderThickness="0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="0,0,0,5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0">
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat=" {0} - {1} ">
+                                        <Binding Path="Name"/>
+                                        <Binding Path="PlaceType"/>
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </GroupBox>
+
+        <!-- Buttons to Add/Remove Locations -->
+        <StackPanel Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" Margin="5">
+            <Button Margin="0,0,0,2" Command="{Binding AddLocationCommand}" CommandParameter="{Binding ElementName=Available, Path=SelectedItem}" Style="{StaticResource SecondaryButton}" Width="22" Height="22" Tag="&#xE760;" />
+            <Button Margin="0,2,0,0" Command="{Binding RemoveLocationCommand}" CommandParameter="{Binding ElementName=Assigned, Path=SelectedItem}" Style="{StaticResource SecondaryButton}" Width="22" Height="22" Tag="&#xE760;" />
+        </StackPanel>
+
+        <!-- Available Locations Section -->
+        <GroupBox Header="Available Locations" Grid.Row="1" Grid.Column="3" Margin="0,5,5,5" Padding="10">
+            <ListView x:Name="Available" ItemsSource="{Binding AvailableLocations}" BorderThickness="0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="0,0,0,5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0">
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat=" {0} - {1} ">
+                                        <Binding Path="Name"/>
+                                        <Binding Path="PlaceType"/>
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </GroupBox>
+
         <!-- Response Section -->
-        <TextBlock Text="{Binding Response}" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="0,0,0,5"/>
+        <TextBlock Text="{Binding Response}" Grid.Row="2" Grid.ColumnSpan="4" HorizontalAlignment="Center" Margin="0,0,0,5"/>
     </Grid>
 </UserControl>

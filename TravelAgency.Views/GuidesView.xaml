@@ -16,12 +16,17 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
+
+        <!-- Przycisk "Add Guide" -->
         <DockPanel Grid.Row="0" LastChildFill="False">
-            <Button Content="Add Guide" Command="{Binding Add}" DockPanel.Dock="Right" Margin="5" Style="{StaticResource SecondaryButton}" Tag="&#xE710;" />
+            <Button Content="Add Guide" Command="{Binding Add}" DockPanel.Dock="Right" Margin="5" Style="{StaticResource PrimaryButton}" Tag="&#xE710;" />
         </DockPanel>
+
+        <!-- Lista przewodników -->
         <ListView Grid.Row="1" ItemsSource="{Binding Guides}" BorderThickness="0" ItemContainerStyle="{StaticResource ListViewPrimaryItem}">
             <ListView.View>
                 <GridView>
+                    <!-- First Name -->
                     <GridViewColumn Header="First Name" DisplayMemberBinding="{Binding FirstName}">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
@@ -29,6 +34,8 @@
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
+
+                    <!-- Last Name -->
                     <GridViewColumn Header="Last Name" DisplayMemberBinding="{Binding LastName}">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
@@ -36,6 +43,8 @@
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
+
+                    <!-- Specialization -->
                     <GridViewColumn Header="Specialization" DisplayMemberBinding="{Binding Specialization}">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
@@ -43,6 +52,8 @@
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
+
+                    <!-- Experience (Years) -->
                     <GridViewColumn Header="Experience (Years)" DisplayMemberBinding="{Binding ExperienceYears}">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
@@ -50,6 +61,8 @@
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
+
+                    <!-- Languages -->
                     <GridViewColumn Header="Languages" DisplayMemberBinding="{Binding Languages}">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
@@ -57,6 +70,34 @@
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
+
+                    <!-- Assigned Locations -->
+                    <GridViewColumn Header="Locations" Width="200">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Expander Header="View Locations" Padding="2">
+                                    <ItemsControl ItemsSource="{Binding Locations}">
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <Grid Margin="0,0,0,5">
+                                                    <TextBlock>
+                                                        <TextBlock.Text>
+                                                            <MultiBinding StringFormat=" {0} - {1} ">
+                                                                <Binding Path="Name"/>
+                                                                <Binding Path="PlaceType"/>
+                                                            </MultiBinding>
+                                                        </TextBlock.Text>
+                                                    </TextBlock>
+                                                </Grid>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                </Expander>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <!-- Edit Button -->
                     <GridViewColumn Header="Edit">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
@@ -64,6 +105,8 @@
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
+
+                    <!-- Remove Button -->
                     <GridViewColumn Header="Remove">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>

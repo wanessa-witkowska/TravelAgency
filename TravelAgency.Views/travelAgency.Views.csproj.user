@@ -2,6 +2,14 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="BookingReportView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CustomerReportView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="AddBookingView.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -36,6 +44,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="BookingsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="BookingReportView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CustomerReportView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ToursView.xaml">
